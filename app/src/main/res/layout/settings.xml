@@ -1,0 +1,174 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/base"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/background"
+	android:orientation="vertical"
+	android:padding="8sp">
+
+	<LinearLayout
+		android:id="@+id/settingsholder"
+		android:layout_width="match_parent"
+		android:layout_height="0sp"
+		android:layout_weight="1"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:id="@+id/unholder"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/unlabel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="8sp"
+				android:text="@string/username"
+				android:textColor="#FFFFFF"
+				android:textSize="25sp" />
+
+			<EditText
+				android:id="@+id/un"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal|center_vertical"
+				android:hint="@string/username"
+				android:imeOptions="actionNext"
+				android:padding="8sp"
+				android:textColor="#ffffffff"
+				android:textColorHint="@color/hint"
+				android:textSize="20sp" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/pwholder"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/pwlabel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="8sp"
+				android:text="@string/password"
+				android:textColor="#FFFFFF"
+				android:textSize="25sp" />
+
+			<EditText
+				android:id="@+id/pw"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal|center_vertical"
+				android:hint="@string/password"
+				android:imeOptions="actionNext"
+				android:inputType="textPassword"
+				android:padding="8sp"
+				android:textColor="#000000"
+				android:textColorHint="@color/hint"
+				android:textSize="20sp" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/moodleholder"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/splcourselabel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="8sp"
+				android:text="@string/moodle_course_id"
+				android:textColor="#FFFFFF"
+				android:textSize="20sp" />
+
+			<EditText
+				android:id="@+id/splcourse"
+				android:layout_width="0sp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="center_horizontal|center_vertical"
+				android:hint="@string/id"
+				android:imeOptions="actionDone"
+				android:inputType="numberSigned"
+				android:padding="8sp"
+				android:textColor="#ffffffff"
+				android:textColorHint="@color/hint"
+				android:textSize="20sp" />
+
+			<ImageView
+				android:id="@+id/courseinfo"
+				android:layout_width="50sp"
+				android:layout_height="match_parent"
+				android:contentDescription="@string/special_course_info"
+				android:scaleType="fitCenter"
+				android:src="@drawable/info" />
+		</LinearLayout>
+
+		<CheckBox
+			android:id="@+id/moodlesignin"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal|center_vertical"
+			android:padding="8sp"
+			android:text="@string/sign_in_to_moodle"
+			android:textColor="#FFFFFF"
+			android:textSize="25sp" />
+
+		<CheckBox
+			android:id="@+id/appsignin"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal|center_vertical"
+			android:padding="8sp"
+			android:text="@string/sign_in_to_app"
+			android:textColor="#FFFFFF"
+			android:textSize="25sp" />
+
+		<CheckBox
+			android:id="@+id/oldweb"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal|center_vertical"
+			android:padding="8sp"
+			android:text="@string/use_old_webmail"
+			android:textColor="#FFFFFF"
+			android:textSize="25sp" />
+
+		<Button
+			android:id="@+id/updateinfo"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@android:color/transparent"
+			android:text="@string/update_info"
+			android:textColor="#FB8C00"
+			android:textSize="30sp" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/updateholder"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/appupdate"
+			android:layout_width="0sp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:text="@string/update_app"
+			android:textColor="#03A9F4"
+			android:textSize="40sp" />
+
+		<ImageView
+			android:id="@+id/appinfo"
+			android:layout_width="50sp"
+			android:layout_height="50sp"
+			android:scaleType="fitCenter"
+			android:src="@drawable/info" />
+	</LinearLayout>
+</LinearLayout>
