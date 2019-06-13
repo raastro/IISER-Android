@@ -35,51 +35,43 @@ public class LoginActivity extends Activity {
                 Toast.makeText(getApplicationContext(), "You have an old device, or have not updated to latest version", Toast.LENGTH_SHORT).show();
 
             }
-
             @Override
             public void onBiometricAuthenticationNotSupported() {
                 //Will be called if the device does not contain any fingerprint sensors
                 Toast.makeText(getApplicationContext(), "You don't have supported hardware!", Toast.LENGTH_SHORT).show();
 
             }
-
             @Override
             public void onBiometricAuthenticationNotAvailable() {
                 //The device does not have any biometrics registered in the device.
                 Toast.makeText(getApplicationContext(), "The device does not have any biometrics registered in the device.", Toast.LENGTH_SHORT).show();
 
             }
-
             @Override
             public void onBiometricAuthenticationPermissionNotGranted() {
                 //android.permission.USE_BIOMETRIC permission is not granted to the app
                 Toast.makeText(getApplicationContext(), "Permission is not granted to the app", Toast.LENGTH_SHORT).show();
             }
-
             @Override
             public void onBiometricAuthenticationInternalError(String error) {
                 //This method is called if one of the fields such as the title, subtitle, description or the negative button text is empty
             }
-
             @Override
             public void onAuthenticationFailed() {
-                //When the fingerprint doesn’t match with any of the fingerprints registered on the device, then this callback will be triggered
+                //When the fingerprint doesn't match with any of the fingerprints registered on the device, then this callback will be triggered
                 Toast.makeText(getApplicationContext(), "Your phone says - 'I've never met this man before'", Toast.LENGTH_SHORT).show();
             }
-
             @Override
             public void onAuthenticationCancelled() {
                 //The authentication is cancelled by the user.
                 Toast.makeText(getApplicationContext(), "Sign-in using password", Toast.LENGTH_SHORT).show();
 
             }
-
             @Override
             public void onAuthenticationSuccessful() {
                 //When the fingerprint is has been successfully matched with one of the fingerprints registered on the device, then this callback will be triggered.
                 signin();
             }
-
             @Override
             public void onAuthenticationHelp(int helpCode, CharSequence helpString) {
                 //This method is called when a non-fatal error has occurred during the authentication process. The callback will be provided with an help code to identify the cause of the error, along with a help message.
@@ -121,7 +113,6 @@ public class LoginActivity extends Activity {
     public void signin(){
         activityChanger.setAction(Intent.ACTION_VIEW);
         activityChanger.setClass(getApplicationContext(), MainActivity.class);
-        activityChanger.putExtra("type", "emer");
         startActivity(activityChanger);
         finish();
     }
