@@ -53,6 +53,6 @@ Special Course - Some courses require more frequent visits than others; hence, w
 This app is under constant development and requires as much help as you can provide it. If you have any bouquets or brickbats or would like to help in the development of the app, do not hesitate to send it to ms18163@iisermohali.ac.in.
 
 ## PC users can also use the PC app for all platforms! (under construction)
-Download the app from (Under construction)[here]()
+Download the app from (Under construction)[here](https://github.com/DhruvaSambrani/IISER-pc)
 
 Built by Dhruva Sambrani of MS18 Coding Club.
