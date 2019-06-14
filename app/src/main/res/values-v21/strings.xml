@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name" translatable="false">IISER-M</string>
     <string name="username">Username</string>
+    <string name="password">Password</string>
     <string name="sign_in">Sign-in</string>
+    <string name="moodle_course_id">Moodle Course ID</string>
+    <string name="id">ID</string>
+    <string name="special_course_info">Special Course Info</string>
+    <string name="sign_in_to_moodle">Sign-in to Moodle</string>
+    <string name="sign_in_to_app">Sign-in to App</string>
+    <string name="use_old_webmail">Use old Webmail</string>
+    <string name="update_info">Update Info</string>
+    <string name="update_app">Update App</string>
 </resources>

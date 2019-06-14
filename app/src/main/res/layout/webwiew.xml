@@ -14,7 +14,7 @@
 		<WebView
 			android:id="@+id/webview"
 			android:layout_width="match_parent"
-			android:layout_height="50dp"
+			android:layout_height="0sp"
 			android:background="@android:color/transparent"
 			android:layout_weight="1"/>
 		<LinearLayout

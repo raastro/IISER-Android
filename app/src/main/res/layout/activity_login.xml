@@ -11,6 +11,7 @@
             android:layout_weight="1"
             android:gravity="center">
             <ImageView
+                android:id="@+id/fingerprintImage"
                 android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:contentDescription="Fingerprint"
