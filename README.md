@@ -2,6 +2,7 @@
 Welcome to the IISER App.
 This App is an attempt to make life at IISER a tad bit more manageable. It contains the links to useful IISER resources. As these resources involve signing in, it becomes a necessity for me to say that we do not collect or store any data on any server (we don't have any). All password data is stored only on your phone. The app is merely a one-click link to where you want to go.
 
+**Those who want to contribute to $noCodingRequired$ without making an account can quote the issue number in the subject and [mail](mailto:dhruvasambrani19@gmail.com?subject=IISER-Android%20$noCodingRequired$%20Issue%23&body=Following%20Info%20pertains%20to%20issue%23) your contribution.**
 ## Install the App now !!!
 ### From your phone
 1. Go [here](https://drive.google.com/drive/folders/1RUnruJILBjbDXUyKMgqoNXoY3RGbgo8i?usp=sharing). Open the file named IISER_\*_\*.apk.
