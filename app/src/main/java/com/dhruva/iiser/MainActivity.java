@@ -138,7 +138,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View _view) {
 				i.setAction(Intent.ACTION_VIEW);
-				i.setData(Uri.parse("mailto:dhruvasambrani19@gmail.com?subject=Request%20for%20new%20wifi%20password&body=Dear%20Sir%2C%0AI%20would%20like%20to%20request%20a%20new%20Wifi%20Password%20for%20my%20new%20device.%0A%0AThank%20You"));
+				i.setData(Uri.parse("mailto:vishalkaushik@iisermohali.ac.in?subject=Request%20for%20new%20wifi%20password&body=Dear%20Sir%2C%0AI%20would%20like%20to%20request%20a%20new%20Wifi%20Password%20for%20my%20new%20device.%0A%0AThank%20You"));
 				startActivity(i);
 			}
 		});
