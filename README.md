@@ -51,7 +51,7 @@ Special Course - Some courses require more frequent visits than others; hence, w
 ### Settings
   Change Settings like Moodle Username and Password.
 
-This app is under constant development and requires as much help as you can provide it. If you have any bouquets or brickbats or would like to help in the development of the app, do not hesitate to send it to ms18163@iisermohali.ac.in.
+This app is under constant development and requires as much help as you can provide it. If you have any bouquets or brickbats or would like to help in the development of the app, do not hesitate to [contact me](mailto:dhruvasambrani19@gmail.com).
 
 ## PC users can also use the PC app for all platforms! (under construction)
 Download the app from (Under construction)[here](https://github.com/DhruvaSambrani/IISER-pc)
