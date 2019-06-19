@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:orientation="vertical"
-    android:padding="8sp"
     android:gravity="center">
 
     <Spinner
@@ -21,7 +20,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="25sp"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal"
+        android:lines="1"
+        android:imeOptions="actionNext"/>
     <EditText
         android:id="@+id/note"
         android:hint="@string/enter_note"
@@ -31,6 +32,8 @@
         android:layout_width="match_parent"
         android:textSize="25sp"
         android:inputType="text"
+        android:lines="1"
+        android:imeOptions="actionGo"
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/pay"
@@ -39,5 +42,6 @@
         android:background="@android:color/transparent"
         android:text="@string/pay"
         android:textColor="#FB8C00"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        />
 </LinearLayout>

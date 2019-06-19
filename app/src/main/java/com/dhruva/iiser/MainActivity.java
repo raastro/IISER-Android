@@ -167,7 +167,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View _view) {
 				activityChanger.setAction(Intent.ACTION_VIEW);
-				activityChanger.setClass(getApplicationContext(), upiPayment.class);
+				activityChanger.setClass(getApplicationContext(), UPIActivity.class);
 				startActivity(activityChanger);
 			}
 		});

@@ -10,19 +10,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-public class upiPayment extends Activity {
+public class UPIActivity extends Activity {
 
     String[] locations = {
             "H5 Mess", "H6 Mess", "H7 Mess", "H8 Mess",
             "H5 Canteen", "H7 Canteen",
-            "LHCEatery", "SC Eatery",
-            "Shiva Stores"};
+            "LHC Eatery", "SC Eatery",
+            "Shiva Stores", "Stationary"};
 
     String[] upiIds = {
-            "", "", "", "",
+            "", "BHARATPE90700002296@yesbankltd", "", "",
             "", "",
             "BHARATPE90100181446@yesbankltd", "BHARATPE90100181438@yesbankltd",
-            ""};
+            "", ""};
 
     Spinner spinner;
 
