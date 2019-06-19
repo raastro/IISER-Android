@@ -12,7 +12,7 @@
 		<ScrollView
 			android:id="@+id/buttonscroll"
 			android:layout_width="match_parent"
-			android:layout_height="50sp"
+			android:layout_height="0sp"
 			android:layout_weight="1">
 			<LinearLayout
 				android:id="@+id/buttonholder"
@@ -24,7 +24,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:background="@android:color/transparent"
-					android:text="Emergency Numbers"
+					android:text="@string/emergency_numbers"
 					android:textSize="30sp"
 					android:textColor="#03A9F4"/>
 				<LinearLayout
@@ -34,7 +34,7 @@
 					android:orientation="horizontal">
 					<Button
 						android:id="@+id/moodle"
-						android:layout_width="wrap_content"
+						android:layout_width="0sp"
 						android:layout_height="wrap_content"
 						android:background="@android:color/transparent"
 						android:text="Moodle"
@@ -47,7 +47,6 @@
 						android:layout_height="wrap_content"
 						android:padding="8sp"
 						android:background="@android:color/transparent"
-						android:text="Button"
 						android:textSize="25sp"
 						android:textColor="#03A9F4"/>
 				</LinearLayout>
@@ -81,7 +80,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:background="@android:color/transparent"
-					android:text="WEBMAIL"
+					android:text="Webmail"
 					android:textSize="30sp"
 					android:textColor="#03A9F4"/>
 				<Button
