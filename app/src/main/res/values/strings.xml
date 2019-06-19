@@ -11,4 +11,8 @@
     <string name="use_old_webmail">Use old Webmail</string>
     <string name="update_info">Update Info</string>
     <string name="update_app">Update App</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="enter_note">Enter Note</string>
+    <string name="pay">Pay</string>
 </resources>

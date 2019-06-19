@@ -42,6 +42,7 @@ public class MainActivity extends Activity {
 		ImageView drive = findViewById(R.id.drive);
 		ImageView mailinfo = findViewById(R.id.mailinfo);
 		ImageView settings = findViewById(R.id.settings);
+		ImageView upi = findViewById(R.id.upi);
 		shared = getSharedPreferences("shared", Activity.MODE_PRIVATE);
 
 		emerno.setOnClickListener(new View.OnClickListener() {
@@ -143,6 +144,7 @@ public class MainActivity extends Activity {
 			}
 		});
 
+
 		drive.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
@@ -161,6 +163,14 @@ public class MainActivity extends Activity {
 			}
 		});
 
+		upi.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View _view) {
+				activityChanger.setAction(Intent.ACTION_VIEW);
+				activityChanger.setClass(getApplicationContext(), upiPayment.class);
+				startActivity(activityChanger);
+			}
+		});
 		settings.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
