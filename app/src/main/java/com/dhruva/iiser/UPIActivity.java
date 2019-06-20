@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class UPIActivity extends Activity {
 
@@ -43,18 +44,21 @@ public class UPIActivity extends Activity {
             @Override
             public void onClick(View _view) {
                 int i = spinner.getSelectedItemPosition();
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.setData(
-                        Uri.parse("upi://pay?" +
-                                "pa="+ upiIds[i] +
-                                "&pn=" + locations[i].replace(" ","%20") +
-                                "&am=" + amt.getText()+
-                                "&cu=INR" +
-                                "&tn=" + note.getText().toString().replace(" ","%20"))
-
-                );
-                startActivity(intent);
+                if (locations[i].equals("")){
+                    Toast.makeText(getApplicationContext(),"UPI ID not added yet",Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.setData(
+                            Uri.parse("upi://pay?" +
+                                    "pa=" + upiIds[i] +
+                                    "&pn=" + locations[i].replace(" ", "%20") +
+                                    "&am=" + amt.getText() +
+                                    "&cu=INR" +
+                                    "&tn=" + note.getText().toString().replace(" ", "%20"))
+                    );
+                    startActivity(intent);
+                }
             }
         });
     }
@@ -66,15 +70,5 @@ public class UPIActivity extends Activity {
         adapter.setDropDownViewResource(R.layout.spinner_item);
         // Apply the adapter to the spinner_item
         spinner.setAdapter(adapter);
-    }
-    @Override
-    protected void onActivityResult(int _requestCode, int _resultCode, Intent _data) {
-        super.onActivityResult(_requestCode, _resultCode, _data);
-
-        switch (_requestCode) {
-
-            default:
-                break;
-        }
     }
 }
