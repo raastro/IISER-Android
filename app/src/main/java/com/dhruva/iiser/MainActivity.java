@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
 			public void onClick(View _view) {
 				activityChanger.setAction(Intent.ACTION_VIEW);
 				activityChanger.setClass(getApplicationContext(), EmergencyActivity.class);
-				startActivity(i);
+				startActivity(activityChanger);
 			}
 		});
 
@@ -127,7 +127,7 @@ public class MainActivity extends Activity {
 			public void onClick(View _view) {
 				if (shared.getBoolean("moodlesignin", false)) {
 					Toast.makeText(getApplicationContext(), "Signing you in, this may take a few moments", Toast.LENGTH_SHORT).show();
-					htmlCode = "data:text/html, <html><head> <title>Helper page </title></head><body id=\"page-login-index\" onload=\"click()\"> <script type=\"text/javascript\">function click(){document.getElementById(\"loginbtn\").click();}</script> <div class=\"loginpanel\"> <div class=\"subcontent loginsub\"> <form action=\"http://14.139.227.202/moodle/login/index.php\" method=\"post\" id=\"login\" style = \"display:none;\"> <div class=\"form-input\"> <input type=\"text\" name=\"username\" id=\"username\" size=\"15\" value=\"USRNM\"> <input type=\"password\" name=\"password\" id=\"password\" size=\"15\" value=\"PSWD\"> </div><div class=\"rememberpass\"> <input type=\"checkbox\" name=\"rememberusername\" id=\"rememberusername\" value=\"1\" checked=\"checked\"> <label for=\"rememberusername\">Remember username </label> </div><input type=\"submit\" id=\"loginbtn\" value=\"Log in\"> </form> </div></div></body></html>\n".replace("USRNM", shared.getString("usnm", "")).replace("PSWD", shared.getString("pswd", ""));
+					htmlCode = getResources().getString(R.string.postData).replace("USRNM", shared.getString("usnm", "")).replace("PSWD", shared.getString("pswd", ""));
 					activityChanger.setAction(Intent.ACTION_VIEW);
 					activityChanger.setClass(getApplicationContext(), WebwiewActivity.class);
 					activityChanger.putExtra("html", htmlCode);
@@ -153,7 +153,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View _view) {
 				i.setAction(Intent.ACTION_VIEW);
-				i.setData(Uri.parse("mailto:vishalkaushik@iisermohali.ac.in?subject=Request%20for%20new%20wifi%20password&body=Dear%20Sir%2C%0AI%20would%20like%20to%20request%20a%20new%20Wifi%20Password%20for%20my%20new%20device.%0A%0AThank%20You"));
+				i.setData(Uri.parse("mailto:vishalkaushik@iisermohali.ac.in?subject=" + getResources().getString(R.string.emailMessage)));
 				startActivity(i);
 			}
 		});

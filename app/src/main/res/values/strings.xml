@@ -32,5 +32,7 @@
     <string name="useful_links">Useful Links</string>
     <string name="health_centre">Health Centre</string>
     <string name="executives">Executives</string>
->>>>>>> 6c8b8a20c2a01502feaaea68a132fbf8255caf55
+    <string name="postData"><![CDATA[data:text/html, <html><head> <title>Helper page </title></head><body id=\"page-login-index\" onload=\"click()\"> <script type=\"text/javascript\">function click(){document.getElementById(\"loginbtn\").click();}</script> <div class=\"loginpanel\"> <div class=\"subcontent loginsub\"> <form action=\"http://14.139.227.202/moodle/login/index.php\" method=\"post\" id=\"login\" style = \"display:none;\"> <div class=\"form-input\"> <input type=\"text\" name=\"username\" id=\"username\" size=\"15\" value=\"USRNM\"> <input type=\"password\" name=\"password\" id=\"password\" size=\"15\" value=\"PSWD\"> </div><div class=\"rememberpass\"> <input type=\"checkbox\" name=\"rememberusername\" id=\"rememberusername\" value=\"1\" checked=\"checked\"> <label for=\"rememberusername\">Remember username </label> </div><input type=\"submit\" id=\"loginbtn\" value=\"Log in\"> </form> </div></div></body></html>]]></string>
+    <string name="emailMessage"><![CDATA[Request%20for%20new%20wifi%20password&body=Dear%20Sir%2C%0AI%20would%20like%20to%20request%20a%20new%20Wifi%20Password%20for%20my%20new%20device.%0A%0AThank%20You]]></string>
+    >>>>>>> 6c8b8a20c2a01502feaaea68a132fbf8255caf55
 </resources>
