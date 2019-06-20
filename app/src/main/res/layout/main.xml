@@ -23,7 +23,7 @@
 				android:background="@android:color/transparent"
 				android:text="@string/emergency_numbers"
 				android:textSize="27sp"
-				android:textColor="#03A9F4"/>
+				android:textColor="@color/buttoncolor"/>
 			<LinearLayout
 				android:id="@+id/moodleholder"
 				android:layout_width="match_parent"
@@ -36,7 +36,7 @@
 					android:background="@android:color/transparent"
 					android:text="Moodle"
 					android:textSize="27sp"
-					android:textColor="#03A9F4"
+					android:textColor="@color/buttoncolor"
 					android:layout_weight="1"/>
 				<Button
 					android:id="@+id/splcourse"
@@ -45,7 +45,7 @@
 					android:padding="8sp"
 					android:background="@android:color/transparent"
 					android:textSize="22sp"
-					android:textColor="#03A9F4"/>
+					android:textColor="@color/buttoncolor"/>
 			</LinearLayout>
 			<Button
 				android:id="@+id/erp"
@@ -54,7 +54,7 @@
 				android:background="@android:color/transparent"
 				android:text="ERP"
 				android:textSize="27sp"
-				android:textColor="#03A9F4"/>
+				android:textColor="@color/buttoncolor"/>
 			<Button
 				android:id="@+id/koha"
 				android:layout_width="match_parent"
@@ -62,7 +62,7 @@
 				android:background="@android:color/transparent"
 				android:text="Koha"
 				android:textSize="27sp"
-				android:textColor="#03A9F4"/>
+				android:textColor="@color/buttoncolor"/>
 			<Button
 				android:id="@+id/jupyter"
 				android:layout_width="match_parent"
@@ -71,7 +71,7 @@
 				android:background="@android:color/transparent"
 				android:text="Jupyter"
 				android:textSize="27sp"
-				android:textColor="#03A9F4"/>
+				android:textColor="@color/buttoncolor"/>
 			<Button
 				android:id="@+id/webmail"
 				android:layout_width="match_parent"
@@ -79,7 +79,16 @@
 				android:background="@android:color/transparent"
 				android:text="Webmail"
 				android:textSize="27sp"
-				android:textColor="#03A9F4"/>
+				android:textColor="@color/buttoncolor"/>
+			<Button
+				android:id="@+id/downloadForms"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8sp"
+				android:background="@android:color/transparent"
+				android:text="Download Forms"
+				android:textSize="27sp"
+				android:textColor="@color/buttoncolor"/>
 			<Button
 				android:id="@+id/feedback"
 				android:layout_width="match_parent"
@@ -88,7 +97,7 @@
 				android:background="@android:color/transparent"
 				android:text="Feedback"
 				android:textSize="27sp"
-				android:textColor="#03A9F4"/>
+				android:textColor="@color/buttoncolor"/>
 			<Button
 				android:id="@+id/iisermap"
 				android:layout_width="match_parent"
@@ -96,7 +105,7 @@
 				android:background="@android:color/transparent"
 				android:text="IISER Map"
 				android:textSize="27sp"
-				android:textColor="#03A9F4"/>
+				android:textColor="@color/buttoncolor"/>
 		</LinearLayout>
 	</ScrollView>
 	<LinearLayout

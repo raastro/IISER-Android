@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".formDownloadActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DOWNLOADABLE FORMS"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8sp">
+            <Button
+                android:id="@+id/abssub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="Abstract Submission"/>
+            <Button
+                android:id="@+id/conRem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="Conveyance Reimbursement"/>
+            <Button
+                android:id="@+id/fortra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="Foreign Travel"/>
+            <Button
+                android:id="@+id/leave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="Leave"/>
+            <Button
+                android:id="@+id/ltcform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="LTC Form"/>
+            <Button
+                android:id="@+id/medform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="Medical Reimbursement Form "/>
+            <Button
+                android:id="@+id/proposal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="Proposal for Seminar / Workshop / Conference"/>
+            <Button
+                android:id="@+id/tele"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="Reimbursement of Telephone Expenses"/>
+            <Button
+                android:id="@+id/stat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="Stationery"/>
+            <Button
+                android:id="@+id/strindent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="Store Indent"/>
+            <Button
+                android:id="@+id/purchase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="Stores and Purchase Manual"/>
+            <Button
+                android:id="@+id/ta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="Travel Allowance"/>
+            <Button
+                android:id="@+id/vehreq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="Vehicle Requisition"/>
+            <Button
+                android:id="@+id/vishost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="Visitors Hostel Booking"/>
+            <Button
+                android:id="@+id/aparform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="APAR Form Details"/>
+            <Button
+                android:id="@+id/visfac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="Visitor Faculty Form for Email Account"/>
+            <Button
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/buttoncolor"
+                android:background="@color/transparent"
+                android:text="EMail Account Form"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

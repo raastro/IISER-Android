@@ -37,6 +37,7 @@ public class MainActivity extends Activity {
 		Button feedback = findViewById(R.id.feedback);
 		Button iisermap = findViewById(R.id.iisermap);
 		Button moodle = findViewById(R.id.moodle);
+		Button downloadForms = findViewById(R.id.downloadForms);
 		splcourse = findViewById(R.id.splcourse);
 		ImageView wifipass = findViewById(R.id.wifipass);
 		ImageView drive = findViewById(R.id.drive);
@@ -91,6 +92,15 @@ public class MainActivity extends Activity {
 					i.setData(Uri.parse("https://210.212.36.70"));
 					startActivity(i);
 				}
+			}
+		});
+
+		downloadForms.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View _view) {
+				activityChanger.setAction(Intent.ACTION_VIEW);
+				activityChanger.setClass(getApplicationContext(), formDownloadActivity.class);
+				startActivity(activityChanger);
 			}
 		});
 

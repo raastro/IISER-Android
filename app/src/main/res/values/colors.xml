@@ -6,4 +6,5 @@
 	<color	name="colorControlNormal">#FFC107</color>
     <color name="transparent">#00ffffff</color>
     <color name="hint">#607D8B</color>
+    <color name="buttoncolor">#03A9F4</color>
 </resources>
