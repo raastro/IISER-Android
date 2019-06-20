@@ -1,17 +1,17 @@
 package com.dhruva.iiser;
 
-import android.os.*;
 import android.app.Activity;
-import android.widget.CheckBox;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.content.SharedPreferences;
-import android.content.Intent;
-import android.net.Uri;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
+import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class SettingsActivity extends Activity {
@@ -67,7 +67,7 @@ public class SettingsActivity extends Activity {
 		courseinfo.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
-				dialog.setMessage("Some courses require more frequent visits than others; hence, we have also provided a shortcut to a specific course. The course ID of your chosen course can be found by opening to the Moodle page of your course and looking for the id in the URL (web address) of the page. For example, if your course URL is\nhttp://14.139.227.202/moodle/enrol/index.php?id=499\nthen the ID is 499.");
+				dialog.setMessage(getResources().getString(R.string.moodleSplCourseInfo));
 				dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface _dialog, int _which) {
@@ -90,7 +90,7 @@ public class SettingsActivity extends Activity {
 		appinfo.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
-				dialog.setMessage("This App is an attempt to make life at IISER a tad bit more manageable. It contains the links to useful IISER resources. As these resources involve signing in, it becomes a necessity for me to say that we do not collect or store any data on any server (we don't have any). All password data is stored only on your phone. The app is merely a one-click link to where you want to go.\n\nFeatures of the App-\n\nEmergency Numbers - Under Construction\n\nMoodle - Moodle is a Learning Platform or course management system (CMS). We also provide automatic sign-in.\nSpecial Course - Some courses require more frequent visits than others; hence, we have also provided a shortcut to a specific course. Head to the Settings page to change the ID.\n\nWebmail - The mailing system of IISERM.\n\nERP - ERP is a business process management software that allows us to automate many back-office functions related to technology, services, and human resources.\n\nKoha - The library management system. Here you will find electronic material and other library-related tasks.\n\nFeedback - An essential part of the IISER education system is the feedback session conducted at the end of the Semester. Under Construction.\n\nWiFi password - This allows you to send a pre-drafted email requesting for a password for the Student's WiFi.\n\nBooks Drive Link - A Drive link to almost all the required material for the First Year. Please keep in mind that this is NOT an official repository and may be discontinued in the future.\n\nWebmail Settings - Due to the old setup of the Webmail that IISERM uses, your Email account DOESN'T automatically get added to your Gmail App. So, it takes a little more effort to add it. The following steps help you to do just that.\n\nSettings - Change Settings like Moodle Username and Password.\n\nThis app is under constant development and requires as much help as you can provide it. If you have any bouquets or brickbats or would like to help in the development of the app, do not hesitate to send it to ms18163@iisermohali.ac.in.\n\nBuilt by Dhruva Sambrani.");
+				dialog.setMessage(getResources().getString(R.string.appInfoString));
 				dialog.setPositiveButton("Close", new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface _dialog, int _which) {
