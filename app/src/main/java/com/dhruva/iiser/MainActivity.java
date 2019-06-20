@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class MainActivity extends Activity {
 
 
@@ -199,7 +201,7 @@ public class MainActivity extends Activity {
 	@Override
 	public void onStart() {
 		super.onStart();
-		if (shared.getString("splcourse", "").equals("")) {
+		if (Objects.equals(shared.getString("splcourse", ""), "")) {
 			splcourse.setVisibility(View.GONE);
 		} else {
 			splcourse.setText(shared.getString("splcourse", ""));
