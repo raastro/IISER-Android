@@ -94,7 +94,6 @@ public class SettingsActivity extends Activity {
 				dialog.setPositiveButton("Close", new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface _dialog, int _which) {
-
 					}
 				});
 				dialog.setNegativeButton("Feedback", new DialogInterface.OnClickListener() {
