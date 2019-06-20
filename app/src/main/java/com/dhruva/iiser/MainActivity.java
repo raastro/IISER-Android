@@ -49,8 +49,8 @@ public class MainActivity extends Activity {
 		emerno.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
-				i.setAction(Intent.ACTION_VIEW);
-				i.setClass(getApplicationContext(), EmergencyActivity.class);
+				activityChanger.setAction(Intent.ACTION_VIEW);
+				activityChanger.setClass(getApplicationContext(), EmergencyActivity.class);
 				startActivity(i);
 			}
 		});
