@@ -49,7 +49,9 @@ public class MainActivity extends Activity {
 		emerno.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
-				Toast.makeText(getApplicationContext(), "Under construction", Toast.LENGTH_SHORT).show();
+				i.setAction(Intent.ACTION_VIEW);
+				i.setClass(getApplicationContext(), EmergencyActivity.class);
+				startActivity(i);
 			}
 		});
 

@@ -1,0 +1,169 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:padding="8dp"
+	android:background="@drawable/background">
+	<!--TextView
+		android:id="@+id/emerno"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@android:color/transparent"
+		android:text="@string/emergency_contacts"
+		android:textSize="30sp"
+		android:textColor="#03A9F4"
+		android:gravity="center"/-->
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textColor="#ffffff"
+		android:text="@string/HCT"
+		android:textSize="25sp"
+		android:gravity="center"/>
+	<TableLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="30dp"
+		android:stretchColumns="1">
+		<TableRow>
+			<Button
+				android:textColor="#ffffff"
+				android:background="@android:color/transparent"
+				android:gravity="start"
+				android:text="@string/H5" />
+			<Button
+				android:text="@string/HCall"
+				android:background="@android:color/transparent"
+				android:textColor="#ffffff"
+				android:onClick="callBrijesh"
+				android:gravity="center"
+				android:padding="3dip" />
+			<Button
+				android:text="@string/HEmail"
+				android:background="@android:color/transparent"
+				android:textColor="#ffffff"
+				android:onClick="emailBrijesh"
+				android:gravity="center"
+				android:padding="3dip" />
+		</TableRow>
+		<TableRow>
+			<Button
+				android:textColor="#ffffff"
+				android:background="@android:color/transparent"
+				android:gravity="start"
+				android:text="@string/H6" />
+			<Button
+				android:text="@string/HCall"
+				android:background="@android:color/transparent"
+				android:textColor="#ffffff"
+				android:onClick="callSantosh"
+				android:gravity="center"
+				android:padding="3dip" />
+			<Button
+				android:text="@string/HEmail"
+				android:background="@android:color/transparent"
+				android:textColor="#ffffff"
+				android:onClick="emailSantosh"
+				android:gravity="center"
+				android:padding="3dip" />
+		</TableRow>
+		<TableRow>
+			<Button
+				android:textColor="#ffffff"
+				android:background="@android:color/transparent"
+				android:gravity="start"
+				android:text="@string/H7" />
+			<Button
+				android:text="@string/HCall"
+				android:background="@android:color/transparent"
+				android:textColor="#ffffff"
+				android:onClick="callSatinder"
+				android:gravity="center"
+				android:padding="3dip" />
+			<Button
+				android:text="@string/HEmail"
+				android:background="@android:color/transparent"
+				android:textColor="#ffffff"
+				android:onClick="emailSatinder"
+				android:gravity="center"
+				android:padding="3dip" />
+		</TableRow>
+		<TableRow>
+			<Button
+				android:textColor="#ffffff"
+				android:background="@android:color/transparent"
+				android:gravity="start"
+				android:text="@string/H8" />
+			<Button
+				android:text="@string/HCall"
+				android:background="@android:color/transparent"
+				android:textColor="#ffffff"
+				android:onClick="callManoj"
+				android:gravity="center"
+				android:padding="3dip" />
+			<Button
+				android:text="@string/HEmail"
+				android:background="@android:color/transparent"
+				android:textColor="#ffffff"
+				android:onClick="emailManoj"
+				android:gravity="center"
+				android:padding="3dip" />
+		</TableRow>
+		<TableRow>
+			<Button
+				android:textColor="#ffffff"
+				android:background="@android:color/transparent"
+				android:gravity="start"
+				android:text="@string/H58" />
+			<Button
+				android:text="@string/HCall"
+				android:background="@android:color/transparent"
+				android:textColor="#ffffff"
+				android:onClick="callKalpana"
+				android:gravity="center"
+				android:padding="3dip" />
+			<Button
+				android:text="@string/HEmail"
+				android:background="@android:color/transparent"
+				android:textColor="#ffffff"
+				android:onClick="emailKalpana"
+				android:gravity="center"
+				android:padding="3dip" />
+		</TableRow>
+	</TableLayout>
+	<TextView
+		android:layout_marginTop="20dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textColor="#ffffff"
+		android:text="@string/useful_links"
+		android:textSize="25sp"
+		android:gravity="center" />
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:weightSum="2">
+		<Button
+			android:id="@+id/healthcenter"
+			android:background="@android:color/transparent"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#03A9F4"
+			android:onClick="webHealthCentre"
+			android:text="@string/health_centre"
+			android:gravity="center"
+			android:layout_weight="1"/>
+		<Button
+			android:id="@+id/executives"
+			android:background="@android:color/transparent"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#03A9F4"
+			android:onClick="webExecutives"
+			android:text="@string/executives"
+			android:gravity="center"
+			android:layout_weight="1" />
+	</LinearLayout>>
+</LinearLayout>
