@@ -12,7 +12,6 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class UPIActivity extends Activity {
-
     String[] locations = {
             "H5 Mess", "H6 Mess", "H7 Mess", "H8 Mess",
             "H5 Canteen", "H7 Canteen",

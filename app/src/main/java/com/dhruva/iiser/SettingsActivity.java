@@ -32,11 +32,11 @@ public class SettingsActivity extends Activity {
 	protected void onCreate(Bundle _savedInstanceState) {
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.settings);
-		initialize(_savedInstanceState);
+		initialize();
 		initializeLogic();
 	}
 
-	private void initialize(Bundle _savedInstanceState) {
+	private void initialize() {
 
 		appsignin = findViewById(R.id.appsignin);
 		moodlesignin = findViewById(R.id.moodlesignin);
