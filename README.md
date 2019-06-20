@@ -48,6 +48,9 @@ A Drive link to almost all the necessary material for the First and Second Year.
 ### Webmail Settings
 Due to the old setup of the Webmail that IISERM uses, your Email account DOESN'T automatically get added to your Gmail App. So, it takes a little more effort to add it. The following steps help you to do just that.
 
+### UPI Payments
+You can use the app to make UPI payment to Canteens, Eateries, Messes and Shops in campus. You need Google Pay, ICICI, SBI or equivalent app to use this feature.
+
 ### Settings
 Change Settings like Moodle Username and Password.
 
