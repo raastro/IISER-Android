@@ -19,10 +19,10 @@ public class UPIActivity extends Activity {
             "Shiva Stores", "Stationary"};
 
     String[] upiIds = {
-            "", "BHARATPE90700002296@yesbankltd", "", "",
-            "", "",
+            "rameshchand2107-1@okaxis", "BHARATPE90700002296@yesbankltd", "", "",
+            "", "BHARATPE90700002310@yesbankltd",
             "BHARATPE90100181446@yesbankltd", "BHARATPE90100181438@yesbankltd",
-            "", ""};
+            "BHARATPE90700002236@yesbankltd", "BHARATPE90700002290@yesbankltd"};
 
     Spinner spinner;
 

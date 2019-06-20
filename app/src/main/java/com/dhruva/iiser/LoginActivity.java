@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.biometric.BiometricPrompt;
 import androidx.fragment.app.FragmentActivity;
 
@@ -21,8 +22,7 @@ import java.util.concurrent.Executors;
 //All fingerprint functionality has been copied from https://www.androidauthority.com/how-to-add-fingerprint-authentication-to-your-android-app-747304/
 
 
-public class LoginActivity extends FragmentActivity {
-
+public class LoginActivity extends AppCompatActivity {
     private EditText password;
     private Intent activityChanger = new Intent();
     private SharedPreferences shared;
@@ -30,9 +30,6 @@ public class LoginActivity extends FragmentActivity {
     private ImageView fingerprint;
     BiometricPrompt myBiometricPrompt;
     BiometricPrompt.PromptInfo promptInfo;
-
-    public LoginActivity() {
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
