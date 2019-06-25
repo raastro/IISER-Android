@@ -39,11 +39,12 @@ public class UPIActivity extends Activity {
         final Button pay = findViewById(R.id.pay);
         final EditText amt = findViewById(R.id.amount);
         final EditText note = findViewById(R.id.note);
+        Toast.makeText(getApplicationContext(),"PLEASE MAKE SURE THE UPI ID IS CORRECT BEFORE PAYING. DEVs ARE NOT RESPONSIBLE FOR INCORRECT PAYMENTs!",Toast.LENGTH_LONG).show();
         pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
                 int i = spinner.getSelectedItemPosition();
-                if (locations[i].equals("")){
+                if (upiIds[i].equals("")){
                     Toast.makeText(getApplicationContext(),"UPI ID not added yet",Toast.LENGTH_SHORT).show();
                 } else {
                     Intent intent = new Intent();

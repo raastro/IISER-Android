@@ -171,9 +171,9 @@ public class MainActivity extends Activity {
 		mailinfo.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
-				i.setAction(Intent.ACTION_VIEW);
-				i.setClass(getApplicationContext(), InfoActivity.class);
-				startActivity(i);
+				activityChanger.setAction(Intent.ACTION_VIEW);
+				activityChanger.setClass(getApplicationContext(), InfoActivity.class);
+				startActivity(activityChanger);
 			}
 		});
 
