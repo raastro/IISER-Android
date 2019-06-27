@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
 	android:id="@+id/base"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
@@ -29,6 +30,7 @@
 				android:textSize="25sp" />
 
 			<EditText
+				android:inputType="text"
 				android:id="@+id/un"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -38,7 +40,8 @@
 				android:padding="8sp"
 				android:textColor="#ffffffff"
 				android:textColorHint="@color/hint"
-				android:textSize="20sp" />
+				android:textSize="20sp"
+				tools:ignore="Autofill" />
 		</LinearLayout>
 
 		<LinearLayout
@@ -67,7 +70,8 @@
 				android:padding="8sp"
 				android:textColor="#ffffffff"
 				android:textColorHint="@color/hint"
-				android:textSize="20sp" />
+				android:textSize="20sp"
+				tools:ignore="Autofill" />
 		</LinearLayout>
 
 		<LinearLayout
@@ -97,7 +101,8 @@
 				android:padding="8sp"
 				android:textColor="#ffffffff"
 				android:textColorHint="@color/hint"
-				android:textSize="20sp" />
+				android:textSize="20sp"
+				tools:ignore="Autofill" />
 
 			<ImageView
 				android:id="@+id/courseinfo"
@@ -137,7 +142,15 @@
 			android:text="@string/use_old_webmail"
 			android:textColor="#FFFFFF"
 			android:textSize="25sp" />
-
+		<CheckBox
+			android:id="@+id/getperm"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:padding="8sp"
+			android:text="@string/allow_app_to_call_numbers"
+			android:textColor="#FFFFFF"
+			android:textSize="25sp" />
 		<Button
 			android:id="@+id/updateinfo"
 			android:layout_width="match_parent"
@@ -165,6 +178,7 @@
 			android:textSize="40sp" />
 
 		<ImageView
+			android:contentDescription="@string/app_info"
 			android:id="@+id/appinfo"
 			android:layout_width="50sp"
 			android:layout_height="50sp"

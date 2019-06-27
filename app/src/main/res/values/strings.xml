@@ -33,4 +33,25 @@
     <string name="executives">Executives</string>
     <string name="postData"><![CDATA[data:text/html, <html><head> <title>Helper page </title></head><body id=\"page-login-index\" onload=\"click()\"> <script type=\"text/javascript\">function click(){document.getElementById(\"loginbtn\").click();}</script> <div class=\"loginpanel\"> <div class=\"subcontent loginsub\"> <form action=\"http://14.139.227.202/moodle/login/index.php\" method=\"post\" id=\"login\" style = \"display:none;\"> <div class=\"form-input\"> <input type=\"text\" name=\"username\" id=\"username\" size=\"15\" value=\"USRNM\"> <input type=\"password\" name=\"password\" id=\"password\" size=\"15\" value=\"PSWD\"> </div><div class=\"rememberpass\"> <input type=\"checkbox\" name=\"rememberusername\" id=\"rememberusername\" value=\"1\" checked=\"checked\"> <label for=\"rememberusername\">Remember username </label> </div><input type=\"submit\" id=\"loginbtn\" value=\"Log in\"> </form> </div></div></body></html>]]></string>
     <string name="emailMessage"><![CDATA[Request%20for%20new%20wifi%20password&body=Dear%20Sir%2C%0AI%20would%20like%20to%20request%20a%20new%20Wifi%20Password%20for%20my%20new%20device.%0A%0AThank%20You]]></string>
+    <string name="total">Total</string>
+    <string name="allow_app_to_call_numbers">Allow App to call Numbers</string>
+    <string name="messes">Messes</string>
+    <string name="canteens">Canteens</string>
+    <string name="eateries">Eateries</string>
+    <string name="store">Store</string>
+    <string name="reset">Reset</string>
+    <string name="app_info">App Info</string>
+    <string name="moodle">Moodle</string>
+    <string name="erp">ERP</string>
+    <string name="koha">Koha</string>
+    <string name="jupyter">Jupyter</string>
+    <string name="webmail">Webmail</string>
+    <string name="download_forms">Download Forms</string>
+    <string name="feedback">Feedback</string>
+    <string name="iiser_map">IISER Map</string>
+    <string name="wifipasswordbutton">wifiPasswordButton</string>
+    <string name="drivebutton">driveButton</string>
+    <string name="mailsetbutton">mailSetButton</string>
+    <string name="upibutton">upiButton</string>
+    <string name="settingsbutton">settingsButton</string>
 </resources>

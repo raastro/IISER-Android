@@ -1,18 +1,25 @@
 package com.dhruva.iiser;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 public class SettingsActivity extends Activity {
 
@@ -27,6 +34,7 @@ public class SettingsActivity extends Activity {
 	private SharedPreferences shared;
 	private Intent i = new Intent();
 	private AlertDialog.Builder dialog;
+	private CheckBox getPerm;
 
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
@@ -50,6 +58,12 @@ public class SettingsActivity extends Activity {
 		ImageView appinfo = findViewById(R.id.appinfo);
 		shared = getSharedPreferences("shared", Activity.MODE_PRIVATE);
 		dialog = new AlertDialog.Builder(this);
+		getPerm = findViewById(R.id.getperm);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
+				(ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED ||
+				!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CALL_PHONE))){
+			getPerm.setVisibility(View.GONE);
+		}
 
 		updateinfo.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -107,6 +121,18 @@ public class SettingsActivity extends Activity {
 				dialog.create().show();
 			}
 		});
+
+		getPerm.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if (Build.VERSION.SDK_INT >= 23) {
+					requestPermissions(new String[]{Manifest.permission.CALL_PHONE}, 1);
+				}
+				else {
+					Toast.makeText(getApplicationContext(),"You are on an old OS. Go to App settings to grant it.",Toast.LENGTH_SHORT).show();
+				}
+			}
+		});
 	}
 
 	private void initializeLogic() {
@@ -116,5 +142,17 @@ public class SettingsActivity extends Activity {
 		oldweb.setChecked(shared.getBoolean("useold", false));
 		moodlesignin.setChecked(shared.getBoolean("moodlesignin", false));
 		appsignin.setChecked(shared.getBoolean("appsignin", false));
+	}
+	@Override
+	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+		if (grantResults.length > 0
+				&& grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+			// Permission was granted, Yay!
+			Toast.makeText(getApplicationContext(),"Permission was Granted." , Toast.LENGTH_SHORT).show();
+		} else {
+			// Permission was not granted, Yay!
+			getPerm.setChecked(false);
+			Toast.makeText(getApplicationContext(),"Permission was not Granted.", Toast.LENGTH_SHORT).show();
+		}
 	}
 }
