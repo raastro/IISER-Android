@@ -1,172 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/background"
+    android:orientation="vertical"
     tools:context=".formDownloadActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="8dp">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="DOWNLOADABLE FORMS"
-            android:textStyle="bold"
             android:gravity="center"
+            android:text="DOWNLOADABLE FORMS"
+            android:textColor="@color/colorPrimary"
             android:textSize="30sp"
-            android:textColor="@color/colorPrimary"/>
+            android:textStyle="bold" />
     </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0sp"
-        android:layout_weight="1">
+        android:layout_height="match_parent">
+
         <LinearLayout
-            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="8sp">
+
             <Button
                 android:id="@+id/abssub"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="Abstract Submission"/>
+                android:text="Abstract Submission"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/conRem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="Conveyance Reimbursement"/>
+                android:text="Conveyance Reimbursement"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/fortra"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="Foreign Travel"/>
+                android:text="Foreign Travel"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/leave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="Leave"/>
+                android:text="Leave"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/ltcform"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="LTC Form"/>
+                android:text="LTC Form"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/medform"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="Medical Reimbursement Form "/>
+                android:text="Medical Reimbursement Form "
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/proposal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="Proposal for Seminar / Workshop / Conference"/>
+                android:text="Proposal for Seminar / Workshop / Conference"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/tele"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="Reimbursement of Telephone Expenses"/>
+                android:text="Reimbursement of Telephone Expenses"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/stat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="Stationery"/>
+                android:text="Stationery"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/strindent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="Store Indent"/>
+                android:text="Store Indent"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/purchase"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="Stores and Purchase Manual"/>
+                android:text="Stores and Purchase Manual"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/ta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="Travel Allowance"/>
+                android:text="Travel Allowance"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/vehreq"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="Vehicle Requisition"/>
+                android:text="Vehicle Requisition"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/vishost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="Visitors Hostel Booking"/>
+                android:text="Visitors Hostel Booking"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/aparform"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="APAR Form Details"/>
+                android:text="APAR Form Details"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/visfac"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="Visitor Faculty Form for Email Account"/>
+                android:text="Visitor Faculty Form for Email Account"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
+
             <Button
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/buttoncolor"
                 android:background="@color/transparent"
-                android:text="EMail Account Form"/>
+                android:text="EMail Account Form"
+                android:textColor="@color/buttoncolor"
+                android:textSize="20sp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

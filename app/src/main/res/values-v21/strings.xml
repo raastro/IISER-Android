@@ -13,10 +13,28 @@
     <string name="update_info">Update Info</string>
     <string name="update_app">Update App</string>
     <string name="fingerprint">Fingerprint</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="enter_note">Enter Note</string>
+    <string name="pay">Pay</string>
+    <string name="emergency_numbers">Emergency Numbers</string>
     <string name="appInfoString">This App is an attempt to make life at IISER a tad bit more manageable. It contains the links to useful IISER resources. As these resources involve signing in, it becomes a necessity for me to say that we do not collect or store any data on any server (we don\'t have any). All password data is stored only on your phone. The app is merely a one-click link to where you want to go.  Features of the App-  Emergency Numbers - Under Construction  Moodle - Moodle is a Learning Platform or course management system (CMS). We also provide automatic sign-in. Special Course - Some courses require more frequent visits than others; hence, we have also provided a shortcut to a specific course. Head to the Settings page to change the ID.  Webmail - The mailing system of IISERM.  ERP - ERP is a business process management software that allows us to automate many back-office functions related to technology, services, and human resources.  Koha - The library management system. Here you will find electronic material and other library-related tasks.  Feedback - An essential part of the IISER education system is the feedback session conducted at the end of the Semester. Under Construction.  WiFi password - This allows you to send a pre-drafted email requesting for a password for the Student\'s WiFi.  Books Drive Link - A Drive link to almost all the required material for the First Year. Please keep in mind that this is NOT an official repository and may be discontinued in the future.  Webmail Settings - Due to the old setup of the Webmail that IISERM uses, your Email account DOESN\'T automatically get added to your Gmail App. So, it takes a little more effort to add it. The following steps help you to do just that.  Settings - Change Settings like Moodle Username and Password.  This app is under constant development and requires as much help as you can provide it. If you have any bouquets or brickbats or would like to help in the development of the app, do not hesitate to send it to ms18163@iisermohali.ac.in.  Built by Dhruva Sambrani.</string>
     <string name="moodleSplCourseInfo">Some courses require more frequent visits than others; hence, we have also provided a shortcut to a specific course. The course ID of your chosen course can be found by opening to the Moodle page of your course and looking for the id in the URL (web address) of the page. For example, if your course URL is http://14.139.227.202/moodle/enrol/index.php?id=499 then the ID is 499.</string>
+    <string name="emergency_contacts">Emergency Contacts</string>
+    <string name="H5">Hostel 5\n Mr. Brijesh Bajpai</string>
+    <string name="H6">Hostel 6\n Mr. Santosh</string>
+    <string name="H7">Hostel 7\n Mr. Satinder Singh</string>
+    <string name="H8">Hostel 8\n Mr. Manoj</string>
+    <string name="H58">Hostel 5–8\n Mrs. Kalpana</string>
+    <string name="HCall">Call</string>
+    <string name="HEmail">EMail</string>
+    <string name="HCT">Hostel Caretakers</string>
+    <string name="useful_links">Useful Links</string>
+    <string name="health_centre">Health Centre</string>
+    <string name="executives">Executives</string>
+    <string name="postData"><![CDATA[data:text/html, <html><head> <title>Helper page </title></head><body id=\"page-login-index\" onload=\"click()\"> <script type=\"text/javascript\">function click(){document.getElementById(\"loginbtn\").click();}</script> <div class=\"loginpanel\"> <div class=\"subcontent loginsub\"> <form action=\"http://14.139.227.202/moodle/login/index.php\" method=\"post\" id=\"login\" style = \"display:none;\"> <div class=\"form-input\"> <input type=\"text\" name=\"username\" id=\"username\" size=\"15\" value=\"USRNM\"> <input type=\"password\" name=\"password\" id=\"password\" size=\"15\" value=\"PSWD\"> </div><div class=\"rememberpass\"> <input type=\"checkbox\" name=\"rememberusername\" id=\"rememberusername\" value=\"1\" checked=\"checked\"> <label for=\"rememberusername\">Remember username </label> </div><input type=\"submit\" id=\"loginbtn\" value=\"Log in\"> </form> </div></div></body></html>]]></string>
     <string name="emailMessage"><![CDATA[Request%20for%20new%20wifi%20password&body=Dear%20Sir%2C%0AI%20would%20like%20to%20request%20a%20new%20Wifi%20Password%20for%20my%20new%20device.%0A%0AThank%20You]]></string>
     <string name="total">Total</string>
+    <string name="allow_app_to_call_numbers">Allow App to call Numbers</string>
     <string name="messes">Messes</string>
     <string name="canteens">Canteens</string>
     <string name="eateries">Eateries</string>
