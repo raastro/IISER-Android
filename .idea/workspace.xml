@@ -14,24 +14,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a100d772-b300-4f7d-8793-60d398f96a07" name="Default" comment="Added UPI warning.&#10;Added UPI Graphs.&#10;Fixed #16. Added permission in settings.">
+    <list default="true" id="a100d772-b300-4f7d-8793-60d398f96a07" name="Default" comment="Cleanup">
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_form_download.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_form_download.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-v21/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-v21/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-v21/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-v21/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,19 +49,11 @@
       </state>
     </system>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="IISER" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_form_download.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -110,9 +96,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="width" value="980" />
-    <option name="height" value="1091" />
+    <option name="x" value="963" />
+    <option name="y" value="-12" />
+    <option name="width" value="969" />
+    <option name="height" value="1104" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -121,9 +108,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -131,32 +115,18 @@
               <item name="IISER" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
             </path>
-            <path>
-              <item name="IISER" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="IISER" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="IISER" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="device.picker.selection" value="PNXID19012000138" />
+    <property name="device.picker.selection" value="Nexus_S_API_26" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="settings.editor.selected.configurable" value="instant.run" />
   </component>
@@ -271,23 +241,28 @@
       <option name="project" value="LOCAL" />
       <updated>1561625184350</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Cleanup">
+      <created>1561635868515</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1561635868516</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" x="201" y="164" width="237" height="399" id="Project" order="0" sideWeight="0.4991708" type="SLIDING" weight="0.39966273" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="3" />
-      <window_info id="Build Variants" order="4" sideWeight="0.50082916" side_tool="true" weight="0.24291497" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info id="Resources Explorer" order="8" weight="0.3288364" />
-      <window_info anchor="bottom" id="Messages" sideWeight="0.4974705" weight="0.32941177" />
+      <window_info id="Structure" order="0" sideWeight="0.502451" side_tool="true" weight="0.32874495" />
+      <window_info id="Captures" order="1" side_tool="true" weight="0.24939272" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Build Variants" order="3" sideWeight="0.50082916" side_tool="true" weight="0.24291497" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.502451" side_tool="true" weight="0.23724696" />
+      <window_info id="Resources Explorer" order="7" sideWeight="0.49754903" weight="0.32874495" />
+      <window_info content_ui="combo" x="201" y="164" width="237" height="399" id="Project" order="8" sideWeight="0.49754903" weight="0.23643725" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3277311" />
@@ -298,10 +273,10 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50084317" side_tool="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49915683" weight="0.32941177" />
-      <window_info anchor="bottom" x="26" y="264" width="1229" height="192" id="Build" order="10" sideWeight="0.4974705" weight="0.32504147" />
-      <window_info anchor="bottom" id="Android Profiler" order="11" />
-      <window_info anchor="bottom" id="Logcat" order="12" />
-      <window_info active="true" anchor="right" id="Preview" visible="true" weight="0.3708502" />
+      <window_info anchor="bottom" id="Android Profiler" order="10" />
+      <window_info anchor="bottom" id="Logcat" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4974705" weight="0.32941177" />
+      <window_info anchor="bottom" x="26" y="264" width="1229" height="192" id="Build" order="13" sideWeight="0.4974705" weight="0.2835821" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24939272" />
@@ -311,6 +286,7 @@
       <window_info anchor="right" id="Assistant" order="6" weight="0.32064778" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Device File Explorer" order="8" side_tool="true" />
+      <window_info anchor="right" id="Preview" order="9" weight="0.3708502" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -318,7 +294,8 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Added UPI warning.&#10;Added UPI Graphs.&#10;Fixed #16. Added permission in settings." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added UPI warning.&#10;Added UPI Graphs.&#10;Fixed #16. Added permission in settings." />
+    <MESSAGE value="Cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/gradlew">
@@ -384,7 +361,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-453">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
@@ -420,6 +396,7 @@
           </folding>
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/SettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -455,15 +432,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/emergency.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2317">
           <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_upi_payment.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="530">
           <caret line="200" column="56" lean-forward="true" selection-start-line="200" selection-start-column="56" selection-end-line="200" selection-end-column="56" />
@@ -475,9 +451,9 @@
           </folding>
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/settings.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="179" column="4" selection-start-line="179" selection-start-column="4" selection-end-line="179" selection-end-column="4" />
@@ -487,6 +463,7 @@
           </folding>
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -558,12 +535,12 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_form_download.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        <state relative-caret-position="323">
+          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
   </component>
   <component name="gradleExecuteTaskHistory">
