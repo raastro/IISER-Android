@@ -18,9 +18,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a100d772-b300-4f7d-8793-60d398f96a07" name="Default" comment="Fixed #18 using MPAndroidChart&#10;Added upi amount validation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a100d772-b300-4f7d-8793-60d398f96a07" name="Default" comment="Fixed #18 using MPAndroidChart&#10;Added upi amount validation" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +155,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-11" />
     <option name="width" value="980" />
     <option name="height" value="1091" />
@@ -318,7 +316,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="7" />
+    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Resources Explorer" order="0" sideWeight="0.5023148" side_tool="true" weight="0.23643725" />
@@ -332,7 +330,7 @@
       <window_info content_ui="combo" x="201" y="164" width="237" height="399" id="Project" order="8" sideWeight="0.4976852" weight="0.18218623" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3217247" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3217247" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
