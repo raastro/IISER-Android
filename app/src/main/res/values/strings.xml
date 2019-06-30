@@ -38,7 +38,7 @@
     <string name="canteens">Canteens</string>
     <string name="eateries">Eateries</string>
     <string name="store">Store</string>
-    <string name="reset">Reset</string>
+    <string name="revert">Revert</string>
     <string name="app_info">App Info</string>
     <string name="moodle">Moodle</string>
     <string name="erp">ERP</string>
@@ -53,4 +53,6 @@
     <string name="mailsetbutton">mailSetButton</string>
     <string name="upibutton">upiButton</string>
     <string name="settingsbutton">settingsButton</string>
+    <string name="refresh">Refresh</string>
+    <string name="reset">Reset</string>
 </resources>

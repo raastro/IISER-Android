@@ -19,7 +19,7 @@ public class EmergencyActivity extends Activity {
         setContentView(R.layout.emergency);
     }
 
-    // ToDo: Get Call permissions from user?
+
     public void callBrijesh(View v) {
         Uri number = Uri.parse("tel:9779876456");
         Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
@@ -107,6 +107,7 @@ public class EmergencyActivity extends Activity {
         Intent webIntent = new Intent(Intent.ACTION_VIEW, link);
         startActivity(webIntent);
     }
+
     public void webExecutives(View v) {
         Uri link = Uri.parse("http://www.iisermohali.ac.in/executive-positions/people/executive-positions");
         Intent webIntent = new Intent(Intent.ACTION_VIEW, link);

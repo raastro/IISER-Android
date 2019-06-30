@@ -82,6 +82,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
     private void initialize(){
+        Button emerno = findViewById(R.id.emerno);
         signinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
@@ -96,6 +97,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View _view) {
                 myBiometricPrompt.authenticate(promptInfo);
+            }
+        });
+        emerno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View _view) {
+                activityChanger.setAction(Intent.ACTION_VIEW);
+                activityChanger.setClass(getApplicationContext(), EmergencyActivity.class);
+                startActivity(activityChanger);
             }
         });
     }
