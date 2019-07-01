@@ -18,7 +18,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a100d772-b300-4f7d-8793-60d398f96a07" name="Default" comment="Added Medical officer info.">
+    <list default="true" id="a100d772-b300-4f7d-8793-60d398f96a07" name="Default" comment="Added Medical officer info.&#10;Fixed #8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -427,12 +427,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561965141493</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Medical officer info.&#10;Fixed #8">
+      <created>1561965375344</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1561965375344</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <layout>
       <window_info id="Resources Explorer" order="0" sideWeight="0.5023148" side_tool="true" weight="0.23643725" />
       <window_info id="Structure" order="1" sideWeight="0.502451" side_tool="true" weight="0.32874495" />
@@ -452,11 +458,11 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50084317" side_tool="true" weight="0.32941177" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49915683" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49915683" visible="true" weight="0.3283582" />
       <window_info anchor="bottom" id="Android Profiler" order="10" />
       <window_info anchor="bottom" id="Logcat" order="11" weight="0.3283582" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4974705" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" x="26" y="264" width="1229" height="192" id="Build" order="13" sideWeight="0.4974705" visible="true" weight="0.2835821" />
+      <window_info anchor="bottom" x="26" y="264" width="1229" height="192" id="Build" order="13" sideWeight="0.4974705" weight="0.2835821" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24939272" />
@@ -477,7 +483,8 @@
     <MESSAGE value="Cleanup" />
     <MESSAGE value="Fixed #18 using MPAndroidChart&#10;Added upi amount validation" />
     <MESSAGE value="Added Medical officer info." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Medical officer info." />
+    <MESSAGE value="Added Medical officer info.&#10;Fixed #8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Medical officer info.&#10;Fixed #8" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/gradlew">
