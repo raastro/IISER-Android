@@ -55,4 +55,16 @@
     <string name="settingsbutton">settingsButton</string>
     <string name="refresh">Refresh</string>
     <string name="reset">Reset</string>
+    <string name="manthanlink">manthanLink</string>
+    <string name="doctors_and_medical_officers">Doctors and Medical Officers</string>
+    <string name="dr_gurpreet_singh">Dr. Gurpreet Singh \n Medical Officer</string>
+    <string name="consultant">Dr. S.K. Aggarwal\nConsultant</string>
+    <string name="clinic">Clinic</string>
+    <string name="mobile">Mobile</string>
+    <string name="gynac">Dr. Virpal J.Singh \n Gynacologist</string>
+    <string name="ped">Dr. Paramjit Singh\nPediatrician</string>
+    <string name="pedTiming">Tue,Sat: 0915–1045</string>
+    <string name="gynacTiming">Thur: 1630–1730\nRoom No:12</string>
+    <string name="consTiming">M–F: 1630–1730\nRoom No: 11</string>
+    <string name="medOffTiming">M–F: 0830–1230\nM–F: 1600–1500\nSt: 0830–1330</string>
 </resources>

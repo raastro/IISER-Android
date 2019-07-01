@@ -53,7 +53,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@android:color/transparent"
-            android:onClick="payFunction"
             android:text="@string/pay"
             android:textColor="@color/buttoncolor"
             android:textSize="35sp" />

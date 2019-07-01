@@ -27,15 +27,7 @@ public class EmergencyActivity extends Activity {
             callIntent = new Intent(Intent.ACTION_CALL, number);
         }
         startActivity(callIntent);
-/*        try {
-            startActivity(callIntent);
-        } catch (SecurityException err) {
-            Toast.makeText(getApplicationContext(), "Can't call", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, EmergencyActivity.class);
-            startActivity(intent);
-        }*/
     }
-
     public void callSantosh(View v) {
         Uri number = Uri.parse("tel:9888152230");
         Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
@@ -44,7 +36,6 @@ public class EmergencyActivity extends Activity {
         }
         startActivity(callIntent);
     }
-
     public void callSatinder(View v) {
         Uri number = Uri.parse("tel:9417237476");
         Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
@@ -53,7 +44,6 @@ public class EmergencyActivity extends Activity {
         }
         startActivity(callIntent);
     }
-
     public void callManoj(View v) {
         Uri number = Uri.parse("tel:9872582757");
         Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
@@ -62,7 +52,6 @@ public class EmergencyActivity extends Activity {
         }
         startActivity(callIntent);
     }
-
     public void callKalpana(View v) {
         Uri number = Uri.parse("tel:9814408329");
         Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
@@ -73,33 +62,55 @@ public class EmergencyActivity extends Activity {
     }
 
     public void emailBrijesh(View v) {
-        Uri email= Uri.parse("mailto:dhruvasambrani19@gmail.com");
+        Uri email= Uri.parse("mailto: brjeshbajpai@iisermohali.ac.in");
         Intent emailIntent = new Intent(Intent.ACTION_VIEW, email);
         startActivity(emailIntent);
     }
-
     public void emailSantosh(View v) {
-        Uri email= Uri.parse("mailto:dhruvasambrani19@gmail.com");
+        Uri email= Uri.parse("mailto:Santosh@iisermohali.ac.in");
         Intent emailIntent = new Intent(Intent.ACTION_VIEW, email);
         startActivity(emailIntent);
     }
-
     public void emailManoj(View v) {
-        Uri email= Uri.parse("mailto:dhruvasambrani19@gmail.com");
+        Uri email= Uri.parse("mailto:manojmaurya@iisermohali.ac.in");
         Intent emailIntent = new Intent(Intent.ACTION_VIEW, email);
         startActivity(emailIntent);
     }
-
-    public void emailKalpana(View v) {
-        Uri email= Uri.parse("mailto:dhruvasambrani19@gmail.com");
-        Intent emailIntent = new Intent(Intent.ACTION_VIEW, email);
-        startActivity(emailIntent);
-    }
-
     public void emailSatinder(View v) {
-        Uri email= Uri.parse("mailto:dhruvasambrani19@gmail.com");
+        Uri email= Uri.parse("mailto:satinder@iisermohali.ac.in");
         Intent emailIntent = new Intent(Intent.ACTION_VIEW, email);
         startActivity(emailIntent);
+    }
+
+    public void callGurpreet (View v){
+        Uri number = Uri.parse("tel:9417360233");
+        Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED){
+            callIntent = new Intent(Intent.ACTION_CALL, number);
+        }
+        startActivity(callIntent);
+    }
+    public void emailGurpreet (View v){
+        Uri email= Uri.parse("mailto:gurpreet@iisermohali.ac.in");
+        Intent emailIntent = new Intent(Intent.ACTION_VIEW, email);
+        startActivity(emailIntent);
+    }
+
+    public void callMobileSKAgarwal (View v){
+        Uri number = Uri.parse("tel:9815691982");
+        Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED){
+            callIntent = new Intent(Intent.ACTION_CALL, number);
+        }
+        startActivity(callIntent);
+    }
+    public void callClinicSKAgarwal (View v){
+        Uri number = Uri.parse("tel:01722656079");
+        Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED){
+            callIntent = new Intent(Intent.ACTION_CALL, number);
+        }
+        startActivity(callIntent);
     }
 
     public void webHealthCentre(View v) {

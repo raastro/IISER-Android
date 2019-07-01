@@ -5,144 +5,259 @@
 	android:orientation="vertical"
 	android:padding="8dp"
 	android:background="@drawable/background">
-	<TextView
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:textColor="#ffffff"
-		android:text="@string/HCT"
-		android:textSize="25sp"
-		android:gravity="center"/>
+
+	<!-- Hostel Caretakers -->
 	<TableLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="0dp"
-		android:stretchColumns="1">
-		<TableRow
-			style="?android:attr/buttonBarStyle" >
-			<Button
-				style="?android:attr/buttonBarButtonStyle"
+		android:stretchColumns="1"
+
+		android:layout_marginBottom="10dp">
+		<TableRow>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
 				android:textColor="#ffffff"
-				android:background="@android:color/transparent"
-				android:gravity="start"
-				android:text="@string/H5" />
-			<Button
-				style="?android:attr/buttonBarButtonStyle"
-				android:text="@string/HCall"
-				android:background="@android:color/transparent"
-				android:textColor="#ffffff"
-				android:onClick="callBrijesh"
+				android:text="@string/HCT"
+				android:textSize="25sp"
 				android:gravity="center"
-				android:padding="3dip" />
-			<Button
-				style="?android:attr/buttonBarButtonStyle"
-				android:text="@string/HEmail"
-				android:background="@android:color/transparent"
-				android:textColor="#ffffff"
-				android:onClick="emailBrijesh"
-				android:gravity="center"
-				android:padding="3dip" />
+				android:layout_span="3"/>
 		</TableRow>
-		<TableRow
-			style="?android:attr/buttonBarStyle" >
+		<TableRow>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@android:color/transparent"
+				android:gravity="center"
+				android:text="@string/H5"
+				android:textColor="#ffffff" />
+
 			<Button
-				style="?android:attr/buttonBarButtonStyle"
+
+				android:background="@android:color/transparent"
+				android:gravity="center"
+				android:onClick="callBrijesh"
+				android:text="@string/HCall"
+				android:textColor="#ffffff" />
+
+			<Button
+
+				android:background="@android:color/transparent"
+				android:gravity="center"
+				android:onClick="emailBrijesh"
+				android:padding="3dip"
+				android:text="@string/HEmail"
+				android:textColor="#ffffff" />
+		</TableRow>
+		<TableRow>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
 				android:textColor="#ffffff"
 				android:background="@android:color/transparent"
-				android:gravity="start"
+				android:gravity="center"
 				android:text="@string/H6" />
 			<Button
-				style="?android:attr/buttonBarButtonStyle"
 				android:text="@string/HCall"
 				android:background="@android:color/transparent"
 				android:textColor="#ffffff"
 				android:onClick="callSantosh"
 				android:gravity="center"
-				android:padding="3dip" />
+				 />
 			<Button
-				style="?android:attr/buttonBarButtonStyle"
+
 				android:text="@string/HEmail"
 				android:background="@android:color/transparent"
 				android:textColor="#ffffff"
 				android:onClick="emailSantosh"
 				android:gravity="center"
-				android:padding="3dip" />
+				 />
 		</TableRow>
 		<TableRow
-			style="?android:attr/buttonBarStyle" >
-			<Button
-				style="?android:attr/buttonBarButtonStyle"
+			>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
 				android:textColor="#ffffff"
 				android:background="@android:color/transparent"
-				android:gravity="start"
+				android:gravity="center"
 				android:text="@string/H7" />
 			<Button
-				style="?android:attr/buttonBarButtonStyle"
+
 				android:text="@string/HCall"
 				android:background="@android:color/transparent"
 				android:textColor="#ffffff"
 				android:onClick="callSatinder"
 				android:gravity="center"
-				android:padding="3dip" />
+				 />
 			<Button
-				style="?android:attr/buttonBarButtonStyle"
+
 				android:text="@string/HEmail"
 				android:background="@android:color/transparent"
 				android:textColor="#ffffff"
 				android:onClick="emailSatinder"
 				android:gravity="center"
-				android:padding="3dip" />
+				 />
 		</TableRow>
-		<TableRow
-			style="?android:attr/buttonBarStyle" >
-			<Button
-				style="?android:attr/buttonBarButtonStyle"
+		<TableRow>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
 				android:textColor="#ffffff"
 				android:background="@android:color/transparent"
-				android:gravity="start"
+				android:gravity="center"
 				android:text="@string/H8" />
 			<Button
-				style="?android:attr/buttonBarButtonStyle"
+
 				android:text="@string/HCall"
 				android:background="@android:color/transparent"
 				android:textColor="#ffffff"
 				android:onClick="callManoj"
 				android:gravity="center"
-				android:padding="3dip" />
+				 />
 			<Button
-				style="?android:attr/buttonBarButtonStyle"
+
 				android:text="@string/HEmail"
 				android:background="@android:color/transparent"
 				android:textColor="#ffffff"
 				android:onClick="emailManoj"
 				android:gravity="center"
-				android:padding="3dip" />
+				 />
 		</TableRow>
-		<TableRow
-			style="?android:attr/buttonBarStyle" >
-			<Button
-				style="?android:attr/buttonBarButtonStyle"
+		<TableRow>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
 				android:textColor="#ffffff"
 				android:background="@android:color/transparent"
-				android:gravity="start"
+				android:gravity="center"
 				android:text="@string/H58" />
 			<Button
-				style="?android:attr/buttonBarButtonStyle"
+
 				android:text="@string/HCall"
 				android:background="@android:color/transparent"
 				android:textColor="#ffffff"
 				android:onClick="callKalpana"
 				android:gravity="center"
-				android:padding="3dip" />
-			<Button
-				style="?android:attr/buttonBarButtonStyle"
-				android:text="@string/HEmail"
-				android:background="@android:color/transparent"
-				android:textColor="#ffffff"
-				android:onClick="emailKalpana"
-				android:gravity="center"
-				android:padding="3dip" />
+				android:layout_span="2"
+				/>
 		</TableRow>
 	</TableLayout>
+
+	<!-- Doctors and health -->
+	<TableLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:stretchColumns="1">
+		<TableRow>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textColor="#ffffff"
+				android:text="@string/doctors_and_medical_officers"
+				android:textSize="25sp"
+				android:gravity="center"
+				android:layout_span="4"/>
+		</TableRow>
+		<TableRow>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@android:color/transparent"
+				android:gravity="center"
+				android:text="@string/dr_gurpreet_singh"
+				android:textColor="#ffffff" />
+			<Button
+				android:background="@android:color/transparent"
+				android:gravity="center"
+				android:onClick="callGurpreet"
+				android:text="@string/HCall"
+				android:textColor="#ffffff" />
+			<Button
+				android:background="@android:color/transparent"
+				android:gravity="center"
+				android:onClick="emailGurpreet"
+				android:padding="3dip"
+				android:text="@string/HEmail"
+				android:textColor="#ffffff" />
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@android:color/transparent"
+				android:gravity="center"
+				android:text="@string/medOffTiming"
+				android:textColor="#ffffff" />
+		</TableRow>
+		<TableRow>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:textColor="#ffffff"
+				android:background="@android:color/transparent"
+				android:gravity="center"
+				android:text="@string/consultant"/>
+
+			<Button
+				android:text="@string/mobile"
+				android:background="@android:color/transparent"
+				android:textColor="#ffffff"
+				android:onClick="callMobileSKAgarwal"
+				android:gravity="center"
+				/>
+			<Button
+				android:text="@string/clinic"
+				android:background="@android:color/transparent"
+				android:textColor="#ffffff"
+				android:onClick="callClinicSKAgarwal"
+				android:gravity="center"
+				/>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@android:color/transparent"
+				android:gravity="center"
+				android:text="@string/consTiming"
+				android:textColor="#ffffff" />
+		</TableRow>
+		<TableRow>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:textColor="#ffffff"
+				android:background="@android:color/transparent"
+				android:gravity="center"
+				android:text="@string/gynac" />
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:textColor="#ffffff"
+				android:background="@android:color/transparent"
+				android:gravity="center"
+				android:text="@string/gynacTiming"
+				android:layout_span="3"/>
+		</TableRow>
+		<TableRow>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:textColor="#ffffff"
+				android:background="@android:color/transparent"
+				android:gravity="center"
+				android:text="@string/ped" />
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@android:color/transparent"
+				android:gravity="center"
+				android:text="@string/pedTiming"
+				android:textColor="#ffffff"
+				android:layout_span="3"/>
+		</TableRow>
+	</TableLayout>
+
+	<!-- Useful links -->
 	<TextView
 		android:layout_marginTop="20dp"
 		android:layout_width="match_parent"
@@ -155,10 +270,8 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:orientation="horizontal"
-		android:weightSum="2"
-		style="?android:attr/buttonBarStyle" >
+		android:weightSum="2">
 		<Button
-			style="?android:attr/buttonBarButtonStyle"
 			android:id="@+id/healthcenter"
 			android:background="@android:color/transparent"
 			android:layout_width="match_parent"
@@ -169,7 +282,7 @@
 			android:gravity="center"
 			android:layout_weight="1"/>
 		<Button
-			style="?android:attr/buttonBarButtonStyle"
+			
 			android:id="@+id/executives"
 			android:background="@android:color/transparent"
 			android:layout_width="match_parent"

@@ -18,7 +18,21 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a100d772-b300-4f7d-8793-60d398f96a07" name="Default" comment="Fixed #18 using MPAndroidChart&#10;Added upi amount validation" />
+    <list default="true" id="a100d772-b300-4f7d-8793-60d398f96a07" name="Default" comment="Fixed #18 using MPAndroidChart&#10;Added upi amount validation">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/manthan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/manthan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/manthan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/manthan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/manthan.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/EmergencyActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/EmergencyActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_upi_payment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_upi_payment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/emergency.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/emergency.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-v21/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,23 +64,18 @@
     <favorites_list name="IISER" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/UPIActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+            <state relative-caret-position="249">
+              <caret line="167" column="5" lean-forward="true" selection-start-line="167" selection-start-column="5" selection-end-line="167" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#UPIActivity#0;class#UPIActivity#0" />
                 <element signature="method#onCreate#0;class#UPIActivity#0" />
                 <element signature="method#onDestroy#0;class#UPIActivity#0" />
                 <element signature="method#initialize#0;class#UPIActivity#0" />
-                <element signature="e#3466#5595#0" expanded="true" />
-                <element signature="e#3365#3547#1" />
-                <element signature="e#4089#5553#1" />
-                <element signature="e#4268#4402#1" />
-                <element signature="e#5594#5595#0" expanded="true" />
                 <element signature="method#initializeLogic#0;class#UPIActivity#0" />
                 <element signature="method#initializePie#0;class#UPIActivity#0" />
                 <element signature="method#refreshGraph#0;class#UPIActivity#0" />
@@ -80,17 +89,122 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_upi_payment.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
+              <folding>
+                <element signature="e#4031#4074#0" expanded="true" />
+                <element signature="e#6079#6335#0" expanded="true" />
+                <element signature="e#6334#6335#0" expanded="true" />
+                <element signature="method#onStart#0;class#MainActivity#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/EmergencyActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#onCreate#0;class#EmergencyActivity#0" />
+                <element signature="method#callBrijesh#0;class#EmergencyActivity#0" />
+                <element signature="method#callSantosh#0;class#EmergencyActivity#0" />
+                <element signature="method#callSatinder#0;class#EmergencyActivity#0" />
+                <element signature="method#callManoj#0;class#EmergencyActivity#0" />
+                <element signature="method#callKalpana#0;class#EmergencyActivity#0" />
+                <element signature="method#emailBrijesh#0;class#EmergencyActivity#0" />
+                <element signature="method#emailSantosh#0;class#EmergencyActivity#0" />
+                <element signature="method#emailManoj#0;class#EmergencyActivity#0" />
+                <element signature="method#emailSatinder#0;class#EmergencyActivity#0" />
+                <element signature="method#callGurpreet#0;class#EmergencyActivity#0" />
+                <element signature="method#emailGurpreet#0;class#EmergencyActivity#0" />
+                <element signature="method#callGurpreet#1;class#EmergencyActivity#0" />
+                <element signature="method#callMobileSKAgarwal#1;class#EmergencyActivity#0" />
+                <element signature="method#webHealthCentre#0;class#EmergencyActivity#0" />
+                <element signature="method#webExecutives#0;class#EmergencyActivity#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/emergency.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+            <state relative-caret-position="312">
+              <caret line="217" column="32" lean-forward="true" selection-start-line="217" selection-start-column="32" selection-end-line="217" selection-end-column="32" />
               <folding>
-                <element signature="e#2458#2473#0" expanded="true" />
-                <element signature="e#2568#2868#0" />
-                <element signature="e#2742#2759#0" expanded="true" />
-                <element signature="e#2881#3180#0" />
-                <element signature="e#3026#3042#0" expanded="true" />
+                <element signature="e#451#3497#0" />
+                <element signature="e#592#605#0" expanded="true" />
+                <element signature="e#913#925#0" expanded="true" />
+                <element signature="e#1106#1121#0" expanded="true" />
+                <element signature="e#1330#1346#0" expanded="true" />
+                <element signature="e#1633#1645#0" expanded="true" />
+                <element signature="e#1677#1692#0" expanded="true" />
+                <element signature="e#1877#1893#0" expanded="true" />
+                <element signature="e#2305#2317#0" expanded="true" />
+                <element signature="e#2350#2365#0" expanded="true" />
+                <element signature="e#2551#2567#0" expanded="true" />
+                <element signature="e#2976#2988#0" expanded="true" />
+                <element signature="e#3021#3036#0" expanded="true" />
+                <element signature="e#3219#3235#0" expanded="true" />
+                <element signature="e#3641#3654#0" expanded="true" />
+                <element signature="e#3687#3702#0" expanded="true" />
+                <element signature="e#4068#4365#0" />
+                <element signature="e#4222#4260#0" expanded="true" />
+                <element signature="e#4568#4595#0" expanded="true" />
+                <element signature="e#4775#4790#0" expanded="true" />
+                <element signature="e#4998#5014#0" expanded="true" />
+                <element signature="e#5242#5264#0" expanded="true" />
+                <element signature="e#5551#5571#0" expanded="true" />
+                <element signature="e#5606#5622#0" expanded="true" />
+                <element signature="e#5813#5829#0" expanded="true" />
+                <element signature="e#6184#6204#0" expanded="true" />
+                <element signature="e#5522#6194#0" />
+                <element signature="e#6491#6506#0" expanded="true" />
+                <element signature="e#6734#6755#0" expanded="true" />
+                <element signature="e#6197#6859#0" />
+                <element signature="e#7037#7050#0" expanded="true" />
+                <element signature="e#7246#7265#0" expanded="true" />
+                <element signature="e#7515#7759#0" />
+                <element signature="e#7549#7571#0" expanded="true" />
+                <element signature="e#7024#7878#0" />
+                <element signature="e#8038#8061#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="68" column="63" lean-forward="true" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="165" column="48" lean-forward="true" selection-start-line="165" selection-start-column="48" selection-end-line="165" selection-end-column="48" />
+              <folding>
+                <element signature="e#769#796#0" expanded="true" />
+                <element signature="e#1317#1333#0" expanded="true" />
+                <element signature="e#1977#1990#0" expanded="true" />
+                <element signature="e#2252#2266#0" expanded="true" />
+                <element signature="e#2557#2574#0" expanded="true" />
+                <element signature="e#2839#2856#0" expanded="true" />
+                <element signature="e#3153#3177#0" expanded="true" />
+                <element signature="e#3469#3487#0" expanded="true" />
+                <element signature="e#3753#3772#0" expanded="true" />
+                <element signature="e#5323#5344#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,6 +225,10 @@
       <find>ref</find>
       <find>here</find>
       <find>&quot;test&quot;,</find>
+      <find>sp&quot;</find>
+      <find>html</find>
+      <find>gmail.com</find>
+      <find>TextView</find>
     </findStrings>
     <replaceStrings>
       <replace>eatery</replace>
@@ -118,6 +236,8 @@
       <replace>editor</replace>
       <replace>revert</replace>
       <replace>refresh</replace>
+      <replace>dp&quot;</replace>
+      <replace>iisermohali.ac.in</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -132,10 +252,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/emergency.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/settings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/SettingsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-v21/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
@@ -143,20 +260,23 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/EmergencyActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_graph_viewer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/graphViewer.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values-v21/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_upi_payment.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/UPIActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_upi_payment.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/EmergencyActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values-v21/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/emergency.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
+    <option name="x" value="949" />
     <option name="width" value="980" />
     <option name="height" value="1091" />
   </component>
@@ -170,10 +290,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -326,8 +446,8 @@
       <window_info id="Build Variants" order="4" sideWeight="0.50082916" side_tool="true" weight="0.24291497" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Favorites" order="7" sideWeight="0.502451" side_tool="true" weight="0.23724696" />
-      <window_info content_ui="combo" x="201" y="164" width="237" height="399" id="Project" order="8" sideWeight="0.4976852" weight="0.18218623" />
+      <window_info id="Favorites" order="7" sideWeight="0.5041459" side_tool="true" weight="0.18218623" />
+      <window_info content_ui="combo" x="201" y="164" width="237" height="399" id="Project" order="8" sideWeight="0.49585405" weight="0.37894738" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3217247" />
@@ -338,7 +458,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50084317" side_tool="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49915683" weight="0.32941177" />
-      <window_info anchor="bottom" id="Android Profiler" order="10" />
+      <window_info anchor="bottom" id="Android Profiler" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="11" weight="0.3283582" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4974705" weight="0.32941177" />
       <window_info anchor="bottom" x="26" y="264" width="1229" height="192" id="Build" order="13" sideWeight="0.4974705" weight="0.2835821" />
@@ -346,7 +466,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24939272" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.36923078" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.41700405" />
       <window_info anchor="right" id="Gradle" order="5" weight="0.32955465" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Assistant" order="7" weight="0.32064778" />
@@ -474,22 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="25" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/emergency.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -525,105 +629,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="106" column="34" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_graph_viewer.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/graphViewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-          <folding>
-            <element signature="method#makeData#0;class#graphViewer#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_graph_viewer.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/graphViewer.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/EmergencyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-506">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#onCreate#0;class#EmergencyActivity#0" />
-            <element signature="method#callSantosh#0;class#EmergencyActivity#0" />
-            <element signature="method#callSatinder#0;class#EmergencyActivity#0" />
-            <element signature="method#callManoj#0;class#EmergencyActivity#0" />
-            <element signature="method#callKalpana#0;class#EmergencyActivity#0" />
-            <element signature="method#emailBrijesh#0;class#EmergencyActivity#0" />
-            <element signature="method#emailSantosh#0;class#EmergencyActivity#0" />
-            <element signature="method#emailManoj#0;class#EmergencyActivity#0" />
-            <element signature="method#emailKalpana#0;class#EmergencyActivity#0" />
-            <element signature="method#emailSatinder#0;class#EmergencyActivity#0" />
-            <element signature="method#webHealthCentre#0;class#EmergencyActivity#0" />
-            <element signature="method#webExecutives#0;class#EmergencyActivity#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v21/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-        </state>
-      </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_upi_payment.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
-          <folding>
-            <element signature="e#2458#2473#0" expanded="true" />
-            <element signature="e#2568#2868#0" />
-            <element signature="e#2742#2759#0" expanded="true" />
-            <element signature="e#2881#3180#0" />
-            <element signature="e#3026#3042#0" expanded="true" />
-          </folding>
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/UPIActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+        <state relative-caret-position="249">
+          <caret line="167" column="5" lean-forward="true" selection-start-line="167" selection-start-column="5" selection-end-line="167" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#UPIActivity#0;class#UPIActivity#0" />
             <element signature="method#onCreate#0;class#UPIActivity#0" />
             <element signature="method#onDestroy#0;class#UPIActivity#0" />
             <element signature="method#initialize#0;class#UPIActivity#0" />
-            <element signature="e#3466#5595#0" expanded="true" />
-            <element signature="e#3365#3547#1" />
-            <element signature="e#4089#5553#1" />
-            <element signature="e#4268#4402#1" />
-            <element signature="e#5594#5595#0" expanded="true" />
             <element signature="method#initializeLogic#0;class#UPIActivity#0" />
             <element signature="method#initializePie#0;class#UPIActivity#0" />
             <element signature="method#refreshGraph#0;class#UPIActivity#0" />
@@ -631,6 +664,125 @@
             <element signature="method#revertChanges#0;class#UPIActivity#0" />
             <element signature="method#applyChanges#0;class#UPIActivity#0" />
             <element signature="method#onActivityResult#0;class#UPIActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
+          <folding>
+            <element signature="e#4031#4074#0" expanded="true" />
+            <element signature="e#6079#6335#0" expanded="true" />
+            <element signature="e#6334#6335#0" expanded="true" />
+            <element signature="method#onStart#0;class#MainActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v21/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="165" column="48" lean-forward="true" selection-start-line="165" selection-start-column="48" selection-end-line="165" selection-end-column="48" />
+          <folding>
+            <element signature="e#769#796#0" expanded="true" />
+            <element signature="e#1317#1333#0" expanded="true" />
+            <element signature="e#1977#1990#0" expanded="true" />
+            <element signature="e#2252#2266#0" expanded="true" />
+            <element signature="e#2557#2574#0" expanded="true" />
+            <element signature="e#2839#2856#0" expanded="true" />
+            <element signature="e#3153#3177#0" expanded="true" />
+            <element signature="e#3469#3487#0" expanded="true" />
+            <element signature="e#3753#3772#0" expanded="true" />
+            <element signature="e#5323#5344#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="68" column="63" lean-forward="true" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/emergency.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="217" column="32" lean-forward="true" selection-start-line="217" selection-start-column="32" selection-end-line="217" selection-end-column="32" />
+          <folding>
+            <element signature="e#451#3497#0" />
+            <element signature="e#592#605#0" expanded="true" />
+            <element signature="e#913#925#0" expanded="true" />
+            <element signature="e#1106#1121#0" expanded="true" />
+            <element signature="e#1330#1346#0" expanded="true" />
+            <element signature="e#1633#1645#0" expanded="true" />
+            <element signature="e#1677#1692#0" expanded="true" />
+            <element signature="e#1877#1893#0" expanded="true" />
+            <element signature="e#2305#2317#0" expanded="true" />
+            <element signature="e#2350#2365#0" expanded="true" />
+            <element signature="e#2551#2567#0" expanded="true" />
+            <element signature="e#2976#2988#0" expanded="true" />
+            <element signature="e#3021#3036#0" expanded="true" />
+            <element signature="e#3219#3235#0" expanded="true" />
+            <element signature="e#3641#3654#0" expanded="true" />
+            <element signature="e#3687#3702#0" expanded="true" />
+            <element signature="e#4068#4365#0" />
+            <element signature="e#4222#4260#0" expanded="true" />
+            <element signature="e#4568#4595#0" expanded="true" />
+            <element signature="e#4775#4790#0" expanded="true" />
+            <element signature="e#4998#5014#0" expanded="true" />
+            <element signature="e#5242#5264#0" expanded="true" />
+            <element signature="e#5551#5571#0" expanded="true" />
+            <element signature="e#5606#5622#0" expanded="true" />
+            <element signature="e#5813#5829#0" expanded="true" />
+            <element signature="e#6184#6204#0" expanded="true" />
+            <element signature="e#5522#6194#0" />
+            <element signature="e#6491#6506#0" expanded="true" />
+            <element signature="e#6734#6755#0" expanded="true" />
+            <element signature="e#6197#6859#0" />
+            <element signature="e#7037#7050#0" expanded="true" />
+            <element signature="e#7246#7265#0" expanded="true" />
+            <element signature="e#7515#7759#0" />
+            <element signature="e#7549#7571#0" expanded="true" />
+            <element signature="e#7024#7878#0" />
+            <element signature="e#8038#8061#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dhruva/iiser/EmergencyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#onCreate#0;class#EmergencyActivity#0" />
+            <element signature="method#callBrijesh#0;class#EmergencyActivity#0" />
+            <element signature="method#callSantosh#0;class#EmergencyActivity#0" />
+            <element signature="method#callSatinder#0;class#EmergencyActivity#0" />
+            <element signature="method#callManoj#0;class#EmergencyActivity#0" />
+            <element signature="method#callKalpana#0;class#EmergencyActivity#0" />
+            <element signature="method#emailBrijesh#0;class#EmergencyActivity#0" />
+            <element signature="method#emailSantosh#0;class#EmergencyActivity#0" />
+            <element signature="method#emailManoj#0;class#EmergencyActivity#0" />
+            <element signature="method#emailSatinder#0;class#EmergencyActivity#0" />
+            <element signature="method#callGurpreet#0;class#EmergencyActivity#0" />
+            <element signature="method#emailGurpreet#0;class#EmergencyActivity#0" />
+            <element signature="method#callGurpreet#1;class#EmergencyActivity#0" />
+            <element signature="method#callMobileSKAgarwal#1;class#EmergencyActivity#0" />
+            <element signature="method#webHealthCentre#0;class#EmergencyActivity#0" />
+            <element signature="method#webExecutives#0;class#EmergencyActivity#0" />
           </folding>
         </state>
       </provider>
