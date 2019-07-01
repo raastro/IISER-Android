@@ -61,6 +61,8 @@ public class SettingsActivity extends Activity {
 		shared = getSharedPreferences("shared", Activity.MODE_PRIVATE);
 		dialog = new AlertDialog.Builder(this);
 		getPerm = findViewById(R.id.getperm);
+		Button issue = findViewById(R.id.issues);
+
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
 				(ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED ||
 				!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CALL_PHONE))){
@@ -99,6 +101,15 @@ public class SettingsActivity extends Activity {
 			public void onClick(View _view) {
 				i.setAction(Intent.ACTION_VIEW);
 				i.setData(Uri.parse("https://drive.google.com/drive/folders/1RUnruJILBjbDXUyKMgqoNXoY3RGbgo8i?usp=sharing"));
+				startActivity(i);
+			}
+		});
+
+		issue.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				i.setAction(Intent.ACTION_VIEW);
+				i.setData(Uri.parse("https://gitreports.com/issue/DhruvaSambrani/IISER-Android"));
 				startActivity(i);
 			}
 		});
