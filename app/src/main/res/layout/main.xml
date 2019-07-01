@@ -1,5 +1,6 @@
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:theme="@style/AppTheme"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
@@ -132,14 +133,6 @@
 			android:scaleType="fitCenter"
 			android:layout_weight="1"
 			android:contentDescription="@string/drivebutton"/>
-		<ImageView
-			android:id="@+id/mailinfo"
-			android:layout_width="0dp"
-			android:layout_height="match_parent"
-			android:src="@drawable/mail"
-			android:scaleType="fitCenter"
-			android:layout_weight="1"
-			android:contentDescription="@string/mailsetbutton"/>
 		<ImageView
 			android:id="@+id/upi"
 			android:layout_width="0dp"

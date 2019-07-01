@@ -67,4 +67,5 @@
     <string name="gynacTiming">Thur: 1630–1730\nRoom No:12</string>
     <string name="consTiming">M–F: 1630–1730\nRoom No: 11</string>
     <string name="medOffTiming">M–F: 0830–1230\nM–F: 1600–1500\nSt: 0830–1330</string>
+    <string name="webmail_button">Set-up Webmail for GMail app</string>
 </resources>

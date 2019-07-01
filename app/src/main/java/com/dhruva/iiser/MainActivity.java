@@ -44,7 +44,6 @@ public class MainActivity extends Activity {
 		splcourse = findViewById(R.id.splcourse);
 		ImageView wifipass = findViewById(R.id.wifipass);
 		ImageView drive = findViewById(R.id.drive);
-		ImageView mailinfo = findViewById(R.id.mailinfo);
 		ImageView settings = findViewById(R.id.settings);
 		ImageView upi = findViewById(R.id.upi);
 		ImageView manthan = findViewById(R.id.manthan);
@@ -177,15 +176,6 @@ public class MainActivity extends Activity {
 				linkIntent.setAction(Intent.ACTION_VIEW);
 				linkIntent.setData(Uri.parse("https://drive.google.com/drive/folders/1_zSY8mJgIlGPXUFTQQdyZGaOr1M8WfvK?usp=sharing"));
 				startActivity(linkIntent);
-			}
-		});
-
-		mailinfo.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View _view) {
-				activityIntent.setAction(Intent.ACTION_VIEW);
-				activityIntent.setClass(getApplicationContext(), InfoActivity.class);
-				startActivity(activityIntent);
 			}
 		});
 

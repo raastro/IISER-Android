@@ -16,6 +16,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
@@ -56,6 +57,7 @@ public class SettingsActivity extends Activity {
 		ImageView courseinfo = findViewById(R.id.courseinfo);
 		Button appupdate = findViewById(R.id.appupdate);
 		ImageView appinfo = findViewById(R.id.appinfo);
+		TextView mailInfo = findViewById(R.id.mailinfo);
 		shared = getSharedPreferences("shared", Activity.MODE_PRIVATE);
 		dialog = new AlertDialog.Builder(this);
 		getPerm = findViewById(R.id.getperm);
@@ -129,8 +131,18 @@ public class SettingsActivity extends Activity {
 					requestPermissions(new String[]{Manifest.permission.CALL_PHONE}, 1);
 				}
 				else {
-					Toast.makeText(getApplicationContext(),"You are on an old OS. Go to App settings to grant it.",Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(),"You are on an old OS. " +
+							"Go to App settings to grant permission.",Toast.LENGTH_SHORT).show();
 				}
+			}
+		});
+		mailInfo.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent activityIntent = new Intent();
+				activityIntent.setAction(Intent.ACTION_VIEW);
+				activityIntent.setClass(getApplicationContext(), InfoActivity.class);
+				startActivity(activityIntent);
 			}
 		});
 	}

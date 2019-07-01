@@ -6,7 +6,6 @@
 	android:background="@drawable/background"
 	android:orientation="vertical"
 	android:padding="8sp">
-
 	<LinearLayout
 		android:id="@+id/settingsholder"
 		android:layout_width="match_parent"
@@ -159,8 +158,16 @@
 			android:text="@string/update_info"
 			android:textColor="#FB8C00"
 			android:textSize="30sp" />
+		<TextView
+			android:id="@+id/mailinfo"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@android:color/transparent"
+			android:text="@string/webmail_button"
+			android:textColor="@color/buttoncolor"
+			android:textSize="25sp"
+			android:gravity="center"/>
 	</LinearLayout>
-
 	<LinearLayout
 		android:id="@+id/updateholder"
 		android:layout_width="match_parent"
