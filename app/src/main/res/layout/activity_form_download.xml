@@ -37,7 +37,7 @@
                 android:id="@+id/abssub"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="Abstract Submission"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -46,7 +46,7 @@
                 android:id="@+id/conRem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="Conveyance Reimbursement"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -55,7 +55,7 @@
                 android:id="@+id/fortra"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="Foreign Travel"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -64,7 +64,7 @@
                 android:id="@+id/leave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="Leave"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -73,7 +73,7 @@
                 android:id="@+id/ltcform"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="LTC Form"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -82,7 +82,7 @@
                 android:id="@+id/medform"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="Medical Reimbursement Form "
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -91,7 +91,7 @@
                 android:id="@+id/proposal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="Proposal for Seminar / Workshop / Conference"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -100,7 +100,7 @@
                 android:id="@+id/tele"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="Reimbursement of Telephone Expenses"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -109,7 +109,7 @@
                 android:id="@+id/stat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="Stationery"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -118,7 +118,7 @@
                 android:id="@+id/strindent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="Store Indent"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -127,7 +127,7 @@
                 android:id="@+id/purchase"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="Stores and Purchase Manual"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -136,7 +136,7 @@
                 android:id="@+id/ta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="Travel Allowance"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -145,7 +145,7 @@
                 android:id="@+id/vehreq"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="Vehicle Requisition"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -154,7 +154,7 @@
                 android:id="@+id/vishost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="Visitors Hostel Booking"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -163,7 +163,7 @@
                 android:id="@+id/aparform"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="APAR Form Details"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -172,7 +172,7 @@
                 android:id="@+id/visfac"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="Visitor Faculty Form for Email Account"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />
@@ -181,7 +181,7 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:text="EMail Account Form"
                 android:textColor="@color/buttoncolor"
                 android:textSize="20sp" />

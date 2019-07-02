@@ -16,7 +16,8 @@ public class formDownloadActivity extends AppCompatActivity {
         setContentView(R.layout.activity_form_download);
         initialize();
     }
-    private void initialize(){
+
+    private void initialize() {
         Button abssub = findViewById(R.id.abssub);
         Button conRem = findViewById(R.id.conRem);
         Button fortra = findViewById(R.id.fortra);

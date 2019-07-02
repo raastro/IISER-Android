@@ -52,7 +52,7 @@
                 android:id="@+id/signin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
+                android:background="@android:color/transparent"
                 android:textColor="@color/buttoncolor"
                 android:text="@string/sign_in"
                 android:textSize="30sp"

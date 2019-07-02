@@ -24,6 +24,7 @@ import java.util.concurrent.Executors;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText password;
+    @NonNull
     private Intent activityChanger = new Intent();
     private SharedPreferences shared;
     private Button signinButton;
@@ -74,19 +75,20 @@ public class LoginActivity extends AppCompatActivity {
                 .setNegativeButtonText("Cancel")
                 .build();
 
-        if (shared.getBoolean("appsignin",false)){
+        if (shared.getBoolean("appsignin", false)) {
             initialize();
             myBiometricPrompt.authenticate(promptInfo);
         } else {
             signin();
         }
     }
-    private void initialize(){
+
+    private void initialize() {
         Button emerno = findViewById(R.id.emerno);
         signinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
-                if(Objects.equals(shared.getString("pswd", ""), password.getText().toString())){
+                if (Objects.equals(shared.getString("pswd", ""), password.getText().toString())) {
                     signin();
                 } else {
                     Toast.makeText(getApplicationContext(), "Incorrect Password!", Toast.LENGTH_SHORT).show();
@@ -108,7 +110,8 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-    public void signin(){
+
+    public void signin() {
         activityChanger.setAction(Intent.ACTION_VIEW);
         activityChanger.setClass(getApplicationContext(), MainActivity.class);
         startActivity(activityChanger);

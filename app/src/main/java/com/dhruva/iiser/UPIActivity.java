@@ -15,6 +15,9 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
@@ -28,12 +31,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UPIActivity extends Activity {
+    @NonNull
     String[] locations = {
             "H5 Mess", "H6 Mess", "H7 Mess", "H8 Mess",
             "H5 Canteen", "H7 Canteen",
             "LHC Eatery", "SC Eatery",
             "Shiva Stores", "Stationary"};
 
+    @NonNull
     String[] upiIds = {
             "rameshchand2107-1@okaxis", "BHARATPE90700002296@yesbankltd", "", "",
             "", "BHARATPE90700002310@yesbankltd",
@@ -62,15 +67,16 @@ public class UPIActivity extends Activity {
         initialize();
         initializeLogic();
     }
+
     @Override
-    protected void onDestroy(){
+    protected void onDestroy() {
         super.onDestroy();
         Log.d("Tag", "onStop Called");
         applyChanges();
     }
 
     //initializer Functions
-    private void initialize(){
+    private void initialize() {
         spinner = findViewById(R.id.spinner);
         final Button pay = findViewById(R.id.pay);
         final EditText note = findViewById(R.id.note);
@@ -107,19 +113,17 @@ public class UPIActivity extends Activity {
             @Override
             public void onClick(View v) {
                 int i = spinner.getSelectedItemPosition();
-                if (upiIds[i].equals("")){
+                if (upiIds[i].equals("")) {
                     // UPI id hasn't been added yet.
-                    Toast.makeText(getApplicationContext(),"UPI ID not added yet",Toast.LENGTH_SHORT).show();
-                }
-                else {
+                    Toast.makeText(getApplicationContext(), "UPI ID not added yet", Toast.LENGTH_SHORT).show();
+                } else {
                     //UPI Id exists, continue
                     String amtText = amt.getText().toString();
-                    if (amtText.equals("")){
+                    if (amtText.equals("")) {
                         //amtText is empty
-                        Toast.makeText(getApplicationContext(),"Amount is empty!",
+                        Toast.makeText(getApplicationContext(), "Amount is empty!",
                                 Toast.LENGTH_SHORT).show();
-                    }
-                    else {
+                    } else {
                         Intent intent = new Intent();
                         intent.setAction(Intent.ACTION_VIEW);
                         intent.setData(
@@ -155,7 +159,8 @@ public class UPIActivity extends Activity {
 
 
     }
-    private void initializeLogic(){
+
+    private void initializeLogic() {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this, R.layout.spinner_item, locations
         );
@@ -163,12 +168,12 @@ public class UPIActivity extends Activity {
         adapter.setDropDownViewResource(R.layout.spinner_item);
         // Apply the adapter to the spinner_item
         spinner.setAdapter(adapter);
-        Toast.makeText(getApplicationContext(),"PLEASE MAKE SURE THE UPI ID IS CORRECT BEFORE PAYING. DEVs ARE NOT RESPONSIBLE FOR INCORRECT PAYMENTs!",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "PLEASE MAKE SURE THE UPI ID IS CORRECT BEFORE PAYING. DEVs ARE NOT RESPONSIBLE FOR INCORRECT PAYMENTs!", Toast.LENGTH_LONG).show();
         refreshGraph();
     }
 
     //Graphing Functions
-    private void initializePie(){
+    private void initializePie() {
         pieChart = findViewById(R.id.pieChart);
 
         //Make it look "good"
@@ -209,18 +214,21 @@ public class UPIActivity extends Activity {
         pieChart.setEntryLabelColor(Color.WHITE);
         pieChart.setEntryLabelTextSize(12f);
     }
-    private void refreshGraph(){
+
+    private void refreshGraph() {
         //get data to fill
-        String[] labels = {"Messes","Canteens","Stores","Eateries"};
+        String[] labels = {"Messes", "Canteens", "Stores", "Eateries"};
         List<Float> values = new ArrayList<>();
-        for (String key : new String[] {"mess","canteen","store","eateries"}) {
+        for (String key : new String[]{"mess", "canteen", "store", "eateries"}) {
             values.add(expenditure.getFloat(key, 0.0f));
         }
         //Fill and Refresh
-        pieChart.setData(makeData(labels,values,"Expenditure Split"));
+        pieChart.setData(makeData(labels, values, "Expenditure Split"));
         pieChart.invalidate();
     }
-    private PieData makeData(String[] labels, List<Float> values, String name) {
+
+    @NonNull
+    private PieData makeData(String[] labels, @NonNull List<Float> values, String name) {
 
         // This holds entries for DataSet
         ArrayList<PieEntry> entries = new ArrayList<>();
@@ -228,7 +236,7 @@ public class UPIActivity extends Activity {
         // NOTE: The order of the entries when being added to the entries array determines their
         // position around the center of the chart.
 
-        for (int i=0; i<labels.length; i++) {
+        for (int i = 0; i < labels.length; i++) {
             if (values.get(i) > 0)
                 entries.add(new PieEntry(values.get(i), labels[i]));
         }
@@ -255,7 +263,7 @@ public class UPIActivity extends Activity {
     }
 
     //Save data functions
-    private void revertChanges(){
+    private void revertChanges() {
         Log.d("Tag", "revertChanges called");
         //reset variables to original values
         messChange = 0;
@@ -263,39 +271,39 @@ public class UPIActivity extends Activity {
         canteenChange = 0;
         storeChange = 0;
     }
-    private void applyChanges(){
+
+    private void applyChanges() {
         Log.d("Tag", "applyChanges called");
         expenditure.edit().putFloat("mess",
-                expenditure.getFloat("mess",0.0f)+messChange).apply();
+                expenditure.getFloat("mess", 0.0f) + messChange).apply();
         expenditure.edit().putFloat("canteen",
-                expenditure.getFloat("canteen",0.0f)+canteenChange).apply();
+                expenditure.getFloat("canteen", 0.0f) + canteenChange).apply();
         expenditure.edit().putFloat("store",
-                expenditure.getFloat("store",0.0f)+storeChange).apply();
+                expenditure.getFloat("store", 0.0f) + storeChange).apply();
         expenditure.edit().putFloat("eatery",
-                expenditure.getFloat("eatery",0.0f)+eateryChange).apply();
+                expenditure.getFloat("eatery", 0.0f) + eateryChange).apply();
         messChange = 0;
         eateryChange = 0;
         canteenChange = 0;
         storeChange = 0;
     }
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (data!=null) {
+
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (data != null) {
             //Got a good response
-            if(data.getExtras().getString("Status", "").equals("FAILURE")){
+            if (data.getExtras().getString("Status", "").equals("FAILURE")) {
                 //Failed
-                Toast.makeText(getApplicationContext(),"Transaction Unsuccessful",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Transaction Unsuccessful", Toast.LENGTH_SHORT).show();
                 revertChanges();
-            }
-            else {
+            } else {
                 //Success
-                Toast.makeText(getApplicationContext(),"Transaction Successful",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Transaction Successful", Toast.LENGTH_SHORT).show();
                 applyChanges();
                 refreshGraph();
             }
-        }
-        else {
+        } else {
             //Got a bad response
-            Toast.makeText(getApplicationContext(),"Transaction Result Unknown. " +
+            Toast.makeText(getApplicationContext(), "Transaction Result Unknown. " +
                     "If unsuccessful, touch the revert button. " +
                     "If successful, you MUST refresh the graph to save changes", Toast.LENGTH_LONG)
                     .show();

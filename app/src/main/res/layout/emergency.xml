@@ -272,8 +272,7 @@
 		android:orientation="horizontal"
 		android:weightSum="2">
 		<Button
-			android:id="@+id/healthcenter"
-			android:background="@android:color/transparent"
+            android:background="@android:color/transparent"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:textColor="#03A9F4"
@@ -282,9 +281,8 @@
 			android:gravity="center"
 			android:layout_weight="1"/>
 		<Button
-			
-			android:id="@+id/executives"
-			android:background="@android:color/transparent"
+
+            android:background="@android:color/transparent"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:textColor="#03A9F4"

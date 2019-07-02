@@ -5,16 +5,13 @@
 	android:layout_height="match_parent"
 	android:orientation="vertical"
 	android:padding="8dp"
-	android:id="@+id/base"
-	android:background="@drawable/background">
+    android:background="@drawable/background">
 	<ScrollView
-		android:id="@+id/buttonscroll"
-		android:layout_width="match_parent"
+        android:layout_width="match_parent"
 		android:layout_height="0dp"
 		android:layout_weight="1">
 		<LinearLayout
-			android:id="@+id/buttonholder"
-			android:layout_width="match_parent"
+            android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:orientation="vertical">
 			<Button
@@ -26,8 +23,7 @@
 				android:textSize="27sp"
 				android:textColor="@color/buttoncolor"/>
 			<LinearLayout
-				android:id="@+id/moodleholder"
-				android:layout_width="match_parent"
+                android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:orientation="horizontal"
 				style="?android:attr/buttonBarStyle">
@@ -113,8 +109,7 @@
 		</LinearLayout>
 	</ScrollView>
 	<LinearLayout
-		android:id="@+id/imageholder"
-		android:layout_width="match_parent"
+        android:layout_width="match_parent"
 		android:layout_height="50dp"
 		android:orientation="horizontal">
 		<ImageView
