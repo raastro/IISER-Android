@@ -21,6 +21,13 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.security.crypto.EncryptedSharedPreferences;
+import androidx.security.crypto.MasterKeys;
+
+import java.io.IOException;
+import java.security.GeneralSecurityException;
+
+
 
 public class SettingsActivity extends Activity {
 
@@ -31,17 +38,17 @@ public class SettingsActivity extends Activity {
     private EditText un;
     private EditText pw;
     private EditText splcourse;
-
+    private CheckBox coach;
     private SharedPreferences shared;
+    EncryptedSharedPreferences secret = null;
     @NonNull
     private Intent i = new Intent();
     private AlertDialog.Builder dialog;
     private CheckBox getPerm;
-
     @Override
     protected void onCreate(Bundle _savedInstanceState) {
         super.onCreate(_savedInstanceState);
-        setContentView(R.layout.settings);
+        setContentView(R.layout.activity_settings);
         initialize();
         initializeLogic();
     }
@@ -51,7 +58,6 @@ public class SettingsActivity extends Activity {
         appsignin = findViewById(R.id.appsignin);
         serviceSignin = findViewById(R.id.serviceSignin);
         oldweb = findViewById(R.id.oldweb);
-        Button updateinfo = findViewById(R.id.updateinfo);
         un = findViewById(R.id.un);
         pw = findViewById(R.id.pw);
         splcourse = findViewById(R.id.splcourse);
@@ -59,29 +65,33 @@ public class SettingsActivity extends Activity {
         Button appupdate = findViewById(R.id.appupdate);
         ImageView appinfo = findViewById(R.id.appinfo);
         TextView mailInfo = findViewById(R.id.mailinfo);
+        coach = findViewById(R.id.dontUseCoachMarks);
         shared = getSharedPreferences("shared", Activity.MODE_PRIVATE);
-        dialog = new AlertDialog.Builder(this);
         getPerm = findViewById(R.id.getperm);
         Button issue = findViewById(R.id.issues);
+        dialog = new AlertDialog.Builder(this);
+
+        //Get EncryptedSharedPreferences
+        try {
+            String masterKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC);
+            secret = (EncryptedSharedPreferences) EncryptedSharedPreferences.create(
+                    "secrets",
+                    masterKeyAlias,
+                    this,
+                    EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+                    EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+            );
+        } catch (GeneralSecurityException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
                 (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED ||
                         !ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CALL_PHONE))) {
             getPerm.setVisibility(View.GONE);
         }
-
-        updateinfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View _view) {
-                shared.edit().putString("pswd", pw.getText().toString()).apply();
-                shared.edit().putString("usnm", un.getText().toString()).apply();
-                shared.edit().putString("splcourse", splcourse.getText().toString()).apply();
-                shared.edit().putBoolean("useold", oldweb.isChecked()).apply();
-                shared.edit().putBoolean("serviceSignin", serviceSignin.isChecked()).apply();
-                shared.edit().putBoolean("appsignin", appsignin.isChecked()).apply();
-                Toast.makeText(getApplicationContext(), "Info Updated!", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         courseinfo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,7 +153,7 @@ public class SettingsActivity extends Activity {
                     requestPermissions(new String[]{Manifest.permission.CALL_PHONE}, 1);
                 } else {
                     Toast.makeText(getApplicationContext(), "You are on an old OS. " +
-                            "Go to App settings to grant permission.", Toast.LENGTH_SHORT).show();
+                            "Go to App activity_settings to grant permission.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -159,16 +169,17 @@ public class SettingsActivity extends Activity {
     }
 
     private void initializeLogic() {
-        un.setText(shared.getString("usnm", ""));
-        pw.setText(shared.getString("pswd", ""));
+        un.setText(secret.getString("usnm", ""));
+        pw.setText(secret.getString("pswd", ""));
         splcourse.setText(shared.getString("splcourse", ""));
         oldweb.setChecked(shared.getBoolean("useold", false));
         serviceSignin.setChecked(shared.getBoolean("serviceSignin", false));
-        appsignin.setChecked(shared.getBoolean("appsignin", false));
+        appsignin.setChecked(secret.getBoolean("appsignin", false));
+        coach.setChecked(!shared.getBoolean("useCoachMarks", true));
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (grantResults.length > 0
                 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             // Permission was granted, Yay!
@@ -178,5 +189,20 @@ public class SettingsActivity extends Activity {
             getPerm.setChecked(false);
             Toast.makeText(getApplicationContext(), "Permission was not Granted.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Toast.makeText(getApplicationContext(), "Info Updated!", Toast.LENGTH_SHORT).show();
+
+        shared.edit().putString("splcourse", splcourse.getText().toString()).apply();
+        shared.edit().putBoolean("useold", oldweb.isChecked()).apply();
+        shared.edit().putBoolean("serviceSignin", serviceSignin.isChecked()).apply();
+        shared.edit().putBoolean("useCoachMarks", !coach.isChecked()).apply();
+
+        secret.edit().putString("usnm", un.getText().toString()).apply();
+        secret.edit().putString("pswd", pw.getText().toString()).apply();
+        secret.edit().putBoolean("appsignin", appsignin.isChecked()).apply();
     }
 }

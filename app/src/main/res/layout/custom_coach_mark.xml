@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#33000000"
+    android:id="@+id/coach_mark_master_view">
+
+    <ImageView
+        android:id="@+id/coach_marks_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/coach_mark"
+        android:scaleType="fitXY" />
+
+</LinearLayout>

@@ -1,6 +1,6 @@
 package com.dhruva.iiser;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -14,7 +14,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.biometric.BiometricPrompt;
 import androidx.fragment.app.FragmentActivity;
+import androidx.security.crypto.EncryptedSharedPreferences;
+import androidx.security.crypto.MasterKeys;
 
+import java.io.IOException;
+import java.security.GeneralSecurityException;
 import java.util.Objects;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -26,18 +30,32 @@ public class LoginActivity extends AppCompatActivity {
     private EditText password;
     @NonNull
     private Intent activityChanger = new Intent();
-    private SharedPreferences shared;
     private Button signinButton;
     private ImageView fingerprint;
     BiometricPrompt myBiometricPrompt;
     BiometricPrompt.PromptInfo promptInfo;
+    private Context context = this;
+    SharedPreferences secret = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        try {
+            String masterKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC);
+            secret = EncryptedSharedPreferences.create(
+                    "secrets",
+                    masterKeyAlias,
+                    context,
+                    EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+                    EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+            );
+        } catch (GeneralSecurityException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        shared = getSharedPreferences("shared", Activity.MODE_PRIVATE);
         password = findViewById(R.id.pwentry);
         signinButton = findViewById(R.id.signin);
         fingerprint = findViewById(R.id.fingerprintImage);
@@ -75,7 +93,7 @@ public class LoginActivity extends AppCompatActivity {
                 .setNegativeButtonText("Cancel")
                 .build();
 
-        if (shared.getBoolean("appsignin", false)) {
+        if (secret.getBoolean("appsignin", false)) {
             initialize();
             myBiometricPrompt.authenticate(promptInfo);
         } else {
@@ -88,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
         signinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
-                if (Objects.equals(shared.getString("pswd", ""), password.getText().toString())) {
+                if (Objects.equals(secret.getString("pswd", ""), password.getText().toString())) {
                     signin();
                 } else {
                     Toast.makeText(getApplicationContext(), "Incorrect Password!", Toast.LENGTH_SHORT).show();

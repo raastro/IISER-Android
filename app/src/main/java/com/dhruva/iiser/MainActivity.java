@@ -11,7 +11,11 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.security.crypto.EncryptedSharedPreferences;
+import androidx.security.crypto.MasterKeys;
 
+import java.io.IOException;
+import java.security.GeneralSecurityException;
 import java.util.Objects;
 
 public class MainActivity extends Activity {
@@ -20,6 +24,7 @@ public class MainActivity extends Activity {
     @NonNull
     private String htmlCode = "";
     private Button splcourse;
+    private EncryptedSharedPreferences secret;
     private SharedPreferences shared;
 
     @NonNull
@@ -28,7 +33,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle _savedInstanceState) {
         super.onCreate(_savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.activity_main);
         initialize();
     }
 
@@ -50,6 +55,20 @@ public class MainActivity extends Activity {
         ImageView upi = findViewById(R.id.upi);
         ImageView manthan = findViewById(R.id.manthan);
         shared = getSharedPreferences("shared", Activity.MODE_PRIVATE);
+        try {
+            String masterKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC);
+            secret = (EncryptedSharedPreferences) EncryptedSharedPreferences.create(
+                    "secrets",
+                    masterKeyAlias,
+                    this,
+                    EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+                    EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+            );
+        } catch (GeneralSecurityException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
         //Set onclick listeners
@@ -69,8 +88,8 @@ public class MainActivity extends Activity {
                     activityIntent.setAction(Intent.ACTION_VIEW);
                     activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
                     activityIntent.putExtra("url", "http://erp.iisermohali.ac.in/login.action?" +
-                            "appUser.userId=" + shared.getString("usnm", "") +
-                            "&appUser.passwd=" + shared.getString("pswd", ""));
+                            "appUser.userId=" + secret.getString("usnm", "") +
+                            "&appUser.passwd=" + secret.getString("pswd", ""));
                     startActivity(activityIntent);
                 } else {
                     activityIntent.setAction(Intent.ACTION_VIEW);
@@ -90,8 +109,8 @@ public class MainActivity extends Activity {
                     activityIntent.putExtra("url",
                             "http://library.iisermohali.ac.in/cgi-bin/koha/opac-user.pl/?" +
                                     "koha_login_context=opac" +
-                                    "&userid=" + shared.getString("usnm", "") +
-                                    "&password=" + shared.getString("pswd", ""));
+                                    "&userid=" + secret.getString("usnm", "") +
+                                    "&password=" + secret.getString("pswd", ""));
                     startActivity(activityIntent);
                 } else {
                     activityIntent.setAction(Intent.ACTION_VIEW);
@@ -112,9 +131,9 @@ public class MainActivity extends Activity {
                             Toast.LENGTH_SHORT).show();
                     htmlCode = getResources().getString(R.string.jupyterPostData)
                             .replace("USRNM",
-                                    Objects.requireNonNull(shared.getString("usnm", "")))
+                                    Objects.requireNonNull(secret.getString("usnm", "")))
                             .replace("PSWD",
-                                    Objects.requireNonNull(shared.getString("pswd", "")));
+                                    Objects.requireNonNull(secret.getString("pswd", "")));
                     activityIntent.setAction(Intent.ACTION_VIEW);
                     activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
                     activityIntent.putExtra("url", htmlCode);
@@ -180,9 +199,9 @@ public class MainActivity extends Activity {
                             Toast.LENGTH_SHORT).show();
                     htmlCode = getResources().getString(R.string.moodlePostData)
                             .replace("USRNM",
-                                    Objects.requireNonNull(shared.getString("usnm", "")))
+                                    Objects.requireNonNull(secret.getString("usnm", "")))
                             .replace("PSWD",
-                                    Objects.requireNonNull(shared.getString("pswd", "")));
+                                    Objects.requireNonNull(secret.getString("pswd", "")));
                     activityIntent.setAction(Intent.ACTION_VIEW);
                     activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
                     activityIntent.putExtra("url", htmlCode);

@@ -17,7 +17,7 @@ public class InfoActivity extends Activity {
     @Override
     protected void onCreate(Bundle _savedInstanceState) {
         super.onCreate(_savedInstanceState);
-        setContentView(R.layout.info);
+        setContentView(R.layout.activity_info);
         initialize(_savedInstanceState);
         initializeLogic();
     }

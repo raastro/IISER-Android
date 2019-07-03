@@ -162,11 +162,11 @@ public class UPIActivity extends Activity {
 
     private void initializeLogic() {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                this, R.layout.spinner_item, locations
+                this, R.layout.custom_spinner_item, locations
         );
         // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(R.layout.spinner_item);
-        // Apply the adapter to the spinner_item
+        adapter.setDropDownViewResource(R.layout.custom_spinner_item);
+        // Apply the adapter to the custom_spinner_item
         spinner.setAdapter(adapter);
         Toast.makeText(getApplicationContext(), "PLEASE MAKE SURE THE UPI ID IS CORRECT BEFORE PAYING. DEVs ARE NOT RESPONSIBLE FOR INCORRECT PAYMENTs!", Toast.LENGTH_LONG).show();
         refreshGraph();

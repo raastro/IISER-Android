@@ -1,5 +1,4 @@
 <resources>
-
 	<style	name="AppTheme"	parent="@android:style/Theme.Material.Light.DarkActionBar">
 		<item	name="android:colorPrimary">@color/colorPrimary</item>
 		<item	name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -25,7 +24,16 @@
 		<item	name="android:windowFullscreen">true</item>
 	</style>
 
-	<style name="myProgressBar" parent="@style/Widget.AppCompat.ProgressBar">
+    <style name="myAppCompatFullscreen" parent="Theme.AppCompat">
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:colorControlHighlight">@color/colorControlHighlight</item>
+        <item name="android:colorControlNormal">@color/colorControlNormal</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="myProgressBar" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
 		<item name="android:indeterminateTint">@color/colorAccent</item>
 	</style>
 </resources>
