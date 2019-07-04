@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
     private String htmlCode = "";
     private Button splcourse;
     private EncryptedSharedPreferences secret;
-    private SharedPreferences shared;
+    private SharedPreferences userPreferences;
 
     @NonNull
     private Intent activityIntent = new Intent();
@@ -54,7 +54,7 @@ public class MainActivity extends Activity {
         ImageView settings = findViewById(R.id.settings);
         ImageView upi = findViewById(R.id.upi);
         ImageView manthan = findViewById(R.id.manthan);
-        shared = getSharedPreferences("shared", Activity.MODE_PRIVATE);
+        userPreferences = getSharedPreferences("userPreferences", Activity.MODE_PRIVATE);
         try {
             String masterKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC);
             secret = (EncryptedSharedPreferences) EncryptedSharedPreferences.create(
@@ -84,16 +84,16 @@ public class MainActivity extends Activity {
         erp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
-                if (shared.getBoolean("serviceSignin", false)) {
+                if (userPreferences.getBoolean("serviceSignin", false)) {
                     activityIntent.setAction(Intent.ACTION_VIEW);
-                    activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
+                    activityIntent.setClass(getApplicationContext(), webwiewActivity.class);
                     activityIntent.putExtra("url", "http://erp.iisermohali.ac.in/login.action?" +
                             "appUser.userId=" + secret.getString("usnm", "") +
                             "&appUser.passwd=" + secret.getString("pswd", ""));
                     startActivity(activityIntent);
                 } else {
                     activityIntent.setAction(Intent.ACTION_VIEW);
-                    activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
+                    activityIntent.setClass(getApplicationContext(), webwiewActivity.class);
                     activityIntent.putExtra("url", "http://erp.iisermohali.ac.in/login.action");
                     startActivity(activityIntent);
                 }
@@ -103,9 +103,9 @@ public class MainActivity extends Activity {
         koha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
-                if (shared.getBoolean("serviceSignin", false)) {
+                if (userPreferences.getBoolean("serviceSignin", false)) {
                     activityIntent.setAction(Intent.ACTION_VIEW);
-                    activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
+                    activityIntent.setClass(getApplicationContext(), webwiewActivity.class);
                     activityIntent.putExtra("url",
                             "http://library.iisermohali.ac.in/cgi-bin/koha/opac-user.pl/?" +
                                     "koha_login_context=opac" +
@@ -114,7 +114,7 @@ public class MainActivity extends Activity {
                     startActivity(activityIntent);
                 } else {
                     activityIntent.setAction(Intent.ACTION_VIEW);
-                    activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
+                    activityIntent.setClass(getApplicationContext(), webwiewActivity.class);
                     activityIntent.putExtra("url",
                             "http://library.iisermohali.ac.in/cgi-bin/koha/opac-user.pl");
                     startActivity(activityIntent);
@@ -125,7 +125,7 @@ public class MainActivity extends Activity {
         jupyter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
-                if (shared.getBoolean("serviceSignin", false)) {
+                if (userPreferences.getBoolean("serviceSignin", false)) {
                     Toast.makeText(getApplicationContext(),
                             "Signing you in, this may take a few moments",
                             Toast.LENGTH_SHORT).show();
@@ -135,12 +135,12 @@ public class MainActivity extends Activity {
                             .replace("PSWD",
                                     Objects.requireNonNull(secret.getString("pswd", "")));
                     activityIntent.setAction(Intent.ACTION_VIEW);
-                    activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
+                    activityIntent.setClass(getApplicationContext(), webwiewActivity.class);
                     activityIntent.putExtra("url", htmlCode);
                     startActivity(activityIntent);
                 } else {
                     activityIntent.setAction(Intent.ACTION_VIEW);
-                    activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
+                    activityIntent.setClass(getApplicationContext(), webwiewActivity.class);
                     activityIntent.putExtra("url",
                             "https://172.16.2.171:7040/hub/login");
                     startActivity(activityIntent);
@@ -151,16 +151,16 @@ public class MainActivity extends Activity {
         webmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
-                if (shared.getBoolean("useold", false)) {
+                if (userPreferences.getBoolean("useold", false)) {
                     //use old
                     activityIntent.setAction(Intent.ACTION_VIEW);
-                    activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
+                    activityIntent.setClass(getApplicationContext(), webwiewActivity.class);
                     activityIntent.putExtra("url", "https://webmail.iisermohali.ac.in/src/login.php");
                     startActivity(activityIntent);
                 } else {
                     //use new
                     activityIntent.setAction(Intent.ACTION_VIEW);
-                    activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
+                    activityIntent.setClass(getApplicationContext(), webwiewActivity.class);
                     activityIntent.putExtra("url", "https://210.212.36.70");
                     startActivity(activityIntent);
                 }
@@ -193,7 +193,7 @@ public class MainActivity extends Activity {
         moodle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
-                if (shared.getBoolean("serviceSignin", false)) {
+                if (userPreferences.getBoolean("serviceSignin", false)) {
                     Toast.makeText(getApplicationContext(),
                             "Signing you in, this may take a few moments",
                             Toast.LENGTH_SHORT).show();
@@ -203,12 +203,12 @@ public class MainActivity extends Activity {
                             .replace("PSWD",
                                     Objects.requireNonNull(secret.getString("pswd", "")));
                     activityIntent.setAction(Intent.ACTION_VIEW);
-                    activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
+                    activityIntent.setClass(getApplicationContext(), webwiewActivity.class);
                     activityIntent.putExtra("url", htmlCode);
                     startActivity(activityIntent);
                 } else {
                     activityIntent.setAction(Intent.ACTION_VIEW);
-                    activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
+                    activityIntent.setClass(getApplicationContext(), webwiewActivity.class);
                     activityIntent.putExtra("url", "http://14.139.227.202/moodle/");
                     startActivity(activityIntent);
                 }
@@ -219,9 +219,9 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View _view) {
                 activityIntent.setAction(Intent.ACTION_VIEW);
-                activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
+                activityIntent.setClass(getApplicationContext(), webwiewActivity.class);
                 activityIntent.putExtra("url", "http://14.139.227.202/moodle/course/view.php?id=IDNUM"
-                        .replace("IDNUMBER", Objects.requireNonNull(shared.getString("splcourse", ""))));
+                        .replace("IDNUMBER", Objects.requireNonNull(userPreferences.getString("splcourse", ""))));
                 startActivity(activityIntent);
             }
         });
@@ -242,11 +242,18 @@ public class MainActivity extends Activity {
         drive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
-                activityIntent.setAction(Intent.ACTION_VIEW);
-                activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
-                activityIntent.putExtra("url", "https://drive.google.com/drive/folders/1_zSY8mJgIlGPXUFTQQdyZGaOr1M8WfvK?usp=sharing");
-                startActivity(activityIntent);
+                if (userPreferences.getBoolean("driveInApp", true)) {
+                    activityIntent.setAction(Intent.ACTION_VIEW);
+                    activityIntent.setClass(getApplicationContext(), webwiewActivity.class);
+                    activityIntent.putExtra("url", getResources().getString(R.string.driveLink));
+                    startActivity(activityIntent);
+                } else {
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(getResources().getString(R.string.driveLink)));
+                    startActivity(i);
+                }
             }
+
         });
 
         upi.setOnClickListener(new View.OnClickListener() {
@@ -260,10 +267,17 @@ public class MainActivity extends Activity {
         manthan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activityIntent.setAction(Intent.ACTION_VIEW);
-                activityIntent.setClass(getApplicationContext(), WebwiewActivity.class);
-                activityIntent.putExtra("url", "https://drive.google.com/open?id=1_MV6gHVLx8mx2K9BePctQI1mlkM93XAX");
-                startActivity(activityIntent);
+                if (userPreferences.getBoolean("driveInApp", true)) {
+                    activityIntent.setAction(Intent.ACTION_VIEW);
+                    activityIntent.setClass(getApplicationContext(), webwiewActivity.class);
+                    activityIntent.putExtra("url", getResources().getString(R.string.manthanLink));
+                    startActivity(activityIntent);
+                } else {
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(getResources().getString(R.string.manthanLink)));
+                    startActivity(i);
+                }
+
             }
         });
         settings.setOnClickListener(new View.OnClickListener() {
@@ -280,12 +294,12 @@ public class MainActivity extends Activity {
     @Override
     public void onStart() {
         super.onStart();
-        if (Objects.equals(shared.getString("splcourse", ""), "")) {
+        if (Objects.equals(userPreferences.getString("splcourse", ""), "")) {
             //No spl course selected
             splcourse.setVisibility(View.GONE);
         } else {
             //Spl Course selected
-            splcourse.setText(shared.getString("splcourse", ""));
+            splcourse.setText(userPreferences.getString("splcourse", ""));
             splcourse.setVisibility(View.VISIBLE);
         }
     }

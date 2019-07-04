@@ -35,11 +35,12 @@ public class SettingsActivity extends Activity {
     private CheckBox serviceSignin;
     private CheckBox appsignin;
     private CheckBox oldweb;
+    private CheckBox coach;
+    private CheckBox driveHandler;
     private EditText un;
     private EditText pw;
     private EditText splcourse;
-    private CheckBox coach;
-    private SharedPreferences shared;
+    private SharedPreferences userPreferences;
     EncryptedSharedPreferences secret = null;
     @NonNull
     private Intent i = new Intent();
@@ -65,8 +66,9 @@ public class SettingsActivity extends Activity {
         Button appupdate = findViewById(R.id.appupdate);
         ImageView appinfo = findViewById(R.id.appinfo);
         TextView mailInfo = findViewById(R.id.mailinfo);
-        coach = findViewById(R.id.dontUseCoachMarks);
-        shared = getSharedPreferences("shared", Activity.MODE_PRIVATE);
+        coach = findViewById(R.id.useCoachMarks);
+        driveHandler = findViewById(R.id.driveHandler);
+        userPreferences = getSharedPreferences("userPreferences", Activity.MODE_PRIVATE);
         getPerm = findViewById(R.id.getperm);
         Button issue = findViewById(R.id.issues);
         dialog = new AlertDialog.Builder(this);
@@ -171,11 +173,12 @@ public class SettingsActivity extends Activity {
     private void initializeLogic() {
         un.setText(secret.getString("usnm", ""));
         pw.setText(secret.getString("pswd", ""));
-        splcourse.setText(shared.getString("splcourse", ""));
-        oldweb.setChecked(shared.getBoolean("useold", false));
-        serviceSignin.setChecked(shared.getBoolean("serviceSignin", false));
+        splcourse.setText(userPreferences.getString("splcourse", ""));
+        oldweb.setChecked(userPreferences.getBoolean("useold", false));
+        serviceSignin.setChecked(userPreferences.getBoolean("serviceSignin", false));
         appsignin.setChecked(secret.getBoolean("appsignin", false));
-        coach.setChecked(!shared.getBoolean("useCoachMarks", true));
+        coach.setChecked(userPreferences.getBoolean("useCoachMarks", true));
+        driveHandler.setChecked(userPreferences.getBoolean("driveInApp", true));
     }
 
     @Override
@@ -196,10 +199,11 @@ public class SettingsActivity extends Activity {
         super.onStop();
         Toast.makeText(getApplicationContext(), "Info Updated!", Toast.LENGTH_SHORT).show();
 
-        shared.edit().putString("splcourse", splcourse.getText().toString()).apply();
-        shared.edit().putBoolean("useold", oldweb.isChecked()).apply();
-        shared.edit().putBoolean("serviceSignin", serviceSignin.isChecked()).apply();
-        shared.edit().putBoolean("useCoachMarks", !coach.isChecked()).apply();
+        userPreferences.edit().putString("splcourse", splcourse.getText().toString()).apply();
+        userPreferences.edit().putBoolean("useold", oldweb.isChecked()).apply();
+        userPreferences.edit().putBoolean("serviceSignin", serviceSignin.isChecked()).apply();
+        userPreferences.edit().putBoolean("useCoachMarks", coach.isChecked()).apply();
+        userPreferences.edit().putBoolean("driveInApp", driveHandler.isChecked()).apply();
 
         secret.edit().putString("usnm", un.getText().toString()).apply();
         secret.edit().putString("pswd", pw.getText().toString()).apply();

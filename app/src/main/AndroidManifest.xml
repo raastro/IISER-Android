@@ -52,7 +52,7 @@
             android:configChanges="orientation|screenSize"
             android:theme="@style/NoStatusBar" />
         <activity
-            android:name=".WebwiewActivity"
+            android:name=".webwiewActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/myAppCompatFullscreen" />
     </application>

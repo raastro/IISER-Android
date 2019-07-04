@@ -5,156 +5,171 @@
 	android:background="@drawable/background"
 	android:orientation="vertical"
 	android:padding="8sp">
-	<LinearLayout
-        android:layout_width="match_parent"
-		android:layout_height="0sp"
-		android:layout_weight="1"
-		android:orientation="vertical">
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1">
 
 		<LinearLayout
-            android:layout_width="match_parent"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:orientation="horizontal">
+			android:orientation="vertical">
 
-			<TextView
-                android:layout_width="wrap_content"
+			<LinearLayout
+				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:padding="8sp"
-				android:text="@string/username"
-				android:textColor="#FFFFFF"
-				android:textSize="25sp" />
+				android:orientation="horizontal">
 
-			<EditText
-				android:inputType="text"
-				android:id="@+id/un"
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8sp"
+					android:text="@string/username"
+					android:textColor="#FFFFFF"
+					android:textSize="25sp" />
+
+				<EditText
+					android:inputType="text"
+					android:id="@+id/un"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_horizontal|center_vertical"
+					android:hint="@string/username"
+					android:imeOptions="actionNext"
+					android:padding="8sp"
+					android:textColor="#ffffffff"
+					android:textColorHint="@color/hint"
+					android:textSize="20sp"
+					tools:ignore="Autofill" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8sp"
+					android:text="@string/password"
+					android:textColor="#FFFFFFff"
+					android:textSize="25sp" />
+
+				<EditText
+					android:id="@+id/pw"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_horizontal|center_vertical"
+					android:hint="@string/password"
+					android:imeOptions="actionNext"
+					android:inputType="textPassword"
+					android:padding="8sp"
+					android:textColor="#ffffffff"
+					android:textColorHint="@color/hint"
+					android:textSize="20sp"
+					tools:ignore="Autofill" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8sp"
+					android:text="@string/moodle_course_id"
+					android:textColor="#FFFFFF"
+					android:textSize="20sp" />
+
+				<EditText
+					android:id="@+id/splcourse"
+					android:layout_width="0sp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:gravity="center_horizontal|center_vertical"
+					android:hint="@string/id"
+					android:imeOptions="actionDone"
+					android:inputType="numberSigned"
+					android:padding="8sp"
+					android:textColor="#ffffffff"
+					android:textColorHint="@color/hint"
+					android:textSize="20sp"
+					tools:ignore="Autofill" />
+
+				<ImageView
+					android:id="@+id/courseinfo"
+					android:layout_width="50sp"
+					android:layout_height="match_parent"
+					android:contentDescription="@string/special_course_info"
+					android:scaleType="fitCenter"
+					android:src="@drawable/info_icon" />
+			</LinearLayout>
+
+			<CheckBox
+				android:id="@+id/serviceSignin"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:gravity="center_horizontal|center_vertical"
-				android:hint="@string/username"
-				android:imeOptions="actionNext"
 				android:padding="8sp"
-				android:textColor="#ffffffff"
-				android:textColorHint="@color/hint"
-				android:textSize="20sp"
-				tools:ignore="Autofill" />
-		</LinearLayout>
-
-		<LinearLayout
-            android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:orientation="horizontal">
-
-			<TextView
-                android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:padding="8sp"
-				android:text="@string/password"
-				android:textColor="#FFFFFFff"
+				android:text="@string/sign_in_to_services"
+				android:textColor="#FFFFFF"
 				android:textSize="25sp" />
 
-			<EditText
-				android:id="@+id/pw"
+			<CheckBox
+				android:id="@+id/appsignin"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:gravity="center_horizontal|center_vertical"
-				android:hint="@string/password"
-				android:imeOptions="actionNext"
-				android:inputType="textPassword"
 				android:padding="8sp"
-				android:textColor="#ffffffff"
-				android:textColorHint="@color/hint"
-				android:textSize="20sp"
-				tools:ignore="Autofill" />
-		</LinearLayout>
-
-		<LinearLayout
-            android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:orientation="horizontal">
-
-			<TextView
-                android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:padding="8sp"
-				android:text="@string/moodle_course_id"
+				android:text="@string/sign_in_to_app"
 				android:textColor="#FFFFFF"
-				android:textSize="20sp" />
+				android:textSize="25sp" />
 
-			<EditText
-				android:id="@+id/splcourse"
-				android:layout_width="0sp"
+			<CheckBox
+				android:id="@+id/oldweb"
+				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:layout_weight="1"
 				android:gravity="center_horizontal|center_vertical"
-				android:hint="@string/id"
-				android:imeOptions="actionDone"
-				android:inputType="numberSigned"
 				android:padding="8sp"
-				android:textColor="#ffffffff"
-				android:textColorHint="@color/hint"
-				android:textSize="20sp"
-				tools:ignore="Autofill" />
+				android:text="@string/use_old_webmail"
+				android:textColor="#FFFFFF"
+				android:textSize="25sp" />
 
-			<ImageView
-				android:id="@+id/courseinfo"
-				android:layout_width="50sp"
-				android:layout_height="match_parent"
-				android:contentDescription="@string/special_course_info"
-				android:scaleType="fitCenter"
-				android:src="@drawable/info_icon" />
+			<CheckBox
+				android:id="@+id/useCoachMarks"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal|center_vertical"
+				android:padding="8sp"
+				android:text="@string/use_coach_marks"
+				android:textColor="#FFFFFF"
+				android:textSize="25sp" />
+
+			<CheckBox
+				android:id="@+id/driveHandler"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal|center_vertical"
+				android:padding="8sp"
+				android:text="@string/driveHandler"
+				android:textColor="#FFFFFF"
+				android:textSize="25sp" />
+
+			<CheckBox
+				android:id="@+id/getperm"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:padding="8sp"
+				android:text="@string/allow_app_to_call_numbers"
+				android:textColor="#FFFFFF"
+				android:textSize="25sp" />
 		</LinearLayout>
-
-		<CheckBox
-            android:id="@+id/serviceSignin"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center_horizontal|center_vertical"
-			android:padding="8sp"
-            android:text="@string/sign_in_to_services"
-			android:textColor="#FFFFFF"
-			android:textSize="25sp" />
-
-		<CheckBox
-			android:id="@+id/appsignin"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center_horizontal|center_vertical"
-			android:padding="8sp"
-			android:text="@string/sign_in_to_app"
-			android:textColor="#FFFFFF"
-			android:textSize="25sp" />
-
-		<CheckBox
-			android:id="@+id/oldweb"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center_horizontal|center_vertical"
-			android:padding="8sp"
-			android:text="@string/use_old_webmail"
-			android:textColor="#FFFFFF"
-			android:textSize="25sp" />
-
-		<CheckBox
-			android:id="@+id/dontUseCoachMarks"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center_horizontal|center_vertical"
-			android:padding="8sp"
-			android:text="@string/dont_use_coach_marks"
-			android:textColor="#FFFFFF"
-			android:textSize="25sp" />
-
-		<CheckBox
-			android:id="@+id/getperm"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:gravity="center"
-			android:padding="8sp"
-			android:text="@string/allow_app_to_call_numbers"
-			android:textColor="#FFFFFF"
-			android:textSize="25sp" />
-	</LinearLayout>
-
+	</ScrollView>
 	<TextView
 		android:id="@+id/mailinfo"
 		android:layout_width="match_parent"

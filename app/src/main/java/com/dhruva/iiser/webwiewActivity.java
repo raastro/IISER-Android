@@ -16,13 +16,14 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 
 import java.util.HashSet;
 
-public class WebwiewActivity extends Activity {
+public class webwiewActivity extends Activity {
 
     private WebView webview;
     private ProgressBar loading;
@@ -58,7 +59,8 @@ public class WebwiewActivity extends Activity {
         webview = findViewById(R.id.webview);
         loading = findViewById(R.id.loading);
 
-        if (getSharedPreferences("shared", Activity.MODE_PRIVATE).getBoolean("useCoachMarks", true)) {
+        if (getSharedPreferences("userPreferences", Activity.MODE_PRIVATE)
+                .getBoolean("useCoachMarks", true)) {
             final Dialog coachMarks = new Dialog(this);
             coachMarks.requestWindowFeature(Window.FEATURE_NO_TITLE);
             coachMarks.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
@@ -73,6 +75,8 @@ public class WebwiewActivity extends Activity {
                 }
             });
             coachMarks.show();
+            getSharedPreferences("userPreferences", Activity.MODE_PRIVATE)
+                    .edit().putBoolean("useCoachMarks", false).apply();
         }
 
         webview.setWebViewClient(new WebViewClient() {
@@ -117,6 +121,7 @@ public class WebwiewActivity extends Activity {
                 dialog.show();
             }
         });
+
         webview.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -124,14 +129,22 @@ public class WebwiewActivity extends Activity {
                 if (results.contains(myGestures.NONE)) {
                     return false; //Touch not consumed
                 } else {
-                    if (results.contains(myGestures.SWIPE_UP_DOWN))
+                    if (results.contains(myGestures.SWIPE_UP_DOWN)) {
+                        Toast.makeText(getApplicationContext(), "reload", Toast.LENGTH_SHORT).show();
                         webview.reload();
-                    if (results.contains(myGestures.CUT_DOWN))
+                    }
+                    if (results.contains(myGestures.CUT_DOWN)) {
+                        Toast.makeText(getApplicationContext(), "exit", Toast.LENGTH_SHORT).show();
                         finish();
-                    if (results.contains(myGestures.CUT_RIGHT))
+                    }
+                    if (results.contains(myGestures.CUT_RIGHT)) {
+                        Toast.makeText(getApplicationContext(), "forward", Toast.LENGTH_SHORT).show();
                         webview.goForward();
-                    if (results.contains(myGestures.CUT_LEFT))
+                    }
+                    if (results.contains(myGestures.CUT_LEFT)) {
+                        Toast.makeText(getApplicationContext(), "back", Toast.LENGTH_SHORT).show();
                         webview.goBack();
+                    }
                     return true; //Touch Consumed
                 }
             }

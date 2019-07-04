@@ -49,7 +49,7 @@
     <string name="settingsbutton" translatable="false">settingsButton</string>
     <string name="refresh" translatable="false">Refresh</string>
     <string name="reset" translatable="false">Reset</string>
-    <string name="manthanlink" translatable="false">manthanLink</string>
+    <string name="manthan" translatable="false">Manthan</string>
     <string name="doctors_and_medical_officers" translatable="false">Doctors and Medical Officers</string>
     <string name="dr_gurpreet_singh" translatable="false">Dr. Gurpreet Singh \n Medical Officer</string>
     <string name="consultant" translatable="false">Dr. S.K. Aggarwal\nConsultant</string>
@@ -63,5 +63,9 @@
     <string name="medOffTiming" translatable="false">M–F: 0830–1230\nM–F: 1600–1500\nSt: 0830–1330</string>
     <string name="webmail_button" translatable="false">Set-up Webmail for GMail app</string>
     <string name="report_issue" translatable="false">Report Issue</string>
-    <string name="dont_use_coach_marks">Don\'t show help on Browser</string>
+    <string name="use_coach_marks">Show help on Browser</string>
+    <string name="driveHandler">Open Drive links in-app</string>
+    <string name="manthanLink">https://drive.google.com/open?id=1_MV6gHVLx8mx2K9BePctQI1mlkM93XAX</string>
+    <string name="driveLink">https://drive.google.com/drive/folders/1_zSY8mJgIlGPXUFTQQdyZGaOr1M8WfvK?usp=sharing</string>
+
 </resources>
