@@ -1,0 +1,24 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="UPI"
+        android:enabled="true"
+        android:shortcutShortLabel="@string/upi"
+        android:icon="@drawable/upi">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.dhruva.iiser"
+            android:targetClass="com.dhruva.iiser.UPIActivity" />
+        <!--categories android:name="android.shortcut.conversation" /-->
+    </shortcut>
+    <shortcut
+        android:shortcutId="Emergency"
+        android:enabled="true"
+        android:shortcutShortLabel="@string/emergency"
+        android:icon="@drawable/info_icon">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.dhruva.iiser"
+            android:targetClass="com.dhruva.iiser.EmergencyActivity" />
+    </shortcut>
+    <!-- Specify more shortcuts here. -->
+</shortcuts>

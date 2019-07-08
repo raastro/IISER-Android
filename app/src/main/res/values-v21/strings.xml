@@ -67,5 +67,6 @@
     <string name="driveHandler">Open Drive links in-app</string>
     <string name="manthanLink">https://drive.google.com/open?id=1_MV6gHVLx8mx2K9BePctQI1mlkM93XAX</string>
     <string name="driveLink">https://drive.google.com/drive/folders/1_zSY8mJgIlGPXUFTQQdyZGaOr1M8WfvK?usp=sharing</string>
-
+    <string name="emergency">Emergency Info</string>
+    <string name="upi">UPI Payments</string>
 </resources>
