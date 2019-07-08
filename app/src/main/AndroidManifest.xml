@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.dhruva.iiser">
 
+    <uses-sdk tools:overrideLibrary="androidx.security" />
+
     <uses-feature
         android:name="android.hardware.fingerprint"
         android:required="false" />
 
-    <uses-sdk tools:overrideLibrary="androidx.security" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -18,11 +19,34 @@
         android:fullBackupContent="true"
         android:icon="@drawable/app_icon"
         android:label="IISER-M"
-        android:networkSecurityConfig="@xml/network_security_config"
         android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="n">
+        <receiver
+            android:name=".Widget_Emergency"
+            android:label="Emergency Shortcut">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_emergency_info" />
+        </receiver>
+        <receiver
+            android:name=".Widget_UPI"
+            android:label="UPI Shortcut">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_upi_info" />
+        </receiver>
+
         <activity
             android:name=".formDownloadActivity"
             android:theme="@style/Theme.AppCompat" />
@@ -35,8 +59,11 @@
             android:theme="@style/Theme.AppCompat">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
         </activity>
         <activity
             android:name=".MainActivity"
