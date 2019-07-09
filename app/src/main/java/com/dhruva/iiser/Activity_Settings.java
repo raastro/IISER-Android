@@ -28,8 +28,7 @@ import java.io.IOException;
 import java.security.GeneralSecurityException;
 
 
-
-public class SettingsActivity extends Activity {
+public class Activity_Settings extends Activity {
 
 
     private CheckBox serviceSignin;
@@ -113,7 +112,7 @@ public class SettingsActivity extends Activity {
             @Override
             public void onClick(View _view) {
                 i.setAction(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://drive.google.com/drive/folders/1RUnruJILBjbDXUyKMgqoNXoY3RGbgo8i?usp=sharing"));
+                i.setData(Uri.parse("https://icon_drive.google.com/icon_drive/folders/1RUnruJILBjbDXUyKMgqoNXoY3RGbgo8i?usp=sharing"));
                 startActivity(i);
             }
         });
@@ -164,7 +163,7 @@ public class SettingsActivity extends Activity {
             public void onClick(View v) {
                 Intent activityIntent = new Intent();
                 activityIntent.setAction(Intent.ACTION_VIEW);
-                activityIntent.setClass(getApplicationContext(), InfoActivity.class);
+                activityIntent.setClass(getApplicationContext(), Activity_Info.class);
                 startActivity(activityIntent);
             }
         });
@@ -195,8 +194,7 @@ public class SettingsActivity extends Activity {
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
+    protected void onPause() {
         Toast.makeText(getApplicationContext(), "Info Updated!", Toast.LENGTH_SHORT).show();
 
         userPreferences.edit().putString("splcourse", splcourse.getText().toString()).apply();
@@ -208,5 +206,6 @@ public class SettingsActivity extends Activity {
         secret.edit().putString("usnm", un.getText().toString()).apply();
         secret.edit().putString("pswd", pw.getText().toString()).apply();
         secret.edit().putBoolean("appsignin", appsignin.isChecked()).apply();
+        super.onPause();
     }
 }

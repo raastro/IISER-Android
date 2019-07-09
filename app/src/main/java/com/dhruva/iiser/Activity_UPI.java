@@ -30,7 +30,7 @@ import com.github.mikephil.charting.utils.MPPointF;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UPIActivity extends Activity {
+public class Activity_UPI extends Activity {
     @NonNull
     String[] locations = {
             "H5 Mess", "H6 Mess", "H7 Mess", "H8 Mess",
@@ -51,7 +51,7 @@ public class UPIActivity extends Activity {
     PieChart pieChart;
     float messChange, eateryChange, canteenChange, storeChange;
 
-    public UPIActivity() {
+    public Activity_UPI() {
         messChange = 0f;
         eateryChange = 0f;
         canteenChange = 0f;
@@ -127,7 +127,7 @@ public class UPIActivity extends Activity {
                         Intent intent = new Intent();
                         intent.setAction(Intent.ACTION_VIEW);
                         intent.setData(
-                                Uri.parse("upi://pay?" +
+                                Uri.parse("icon_upi://pay?" +
                                         "pa=" + upiIds[i] +
                                         "&pn=" + locations[i].replace(" ", "%20") +
                                         "&am=" + amt.getText() +
@@ -265,7 +265,7 @@ public class UPIActivity extends Activity {
     //Save data functions
     private void revertChanges() {
         Log.d("Tag", "revertChanges called");
-        //reset variables to original values
+        //icon_reset variables to original values
         messChange = 0;
         eateryChange = 0;
         canteenChange = 0;
@@ -304,7 +304,7 @@ public class UPIActivity extends Activity {
         } else {
             //Got a bad response
             Toast.makeText(getApplicationContext(), "Transaction Result Unknown. " +
-                    "If unsuccessful, touch the revert button. " +
+                    "If unsuccessful, touch the icon_revert button. " +
                     "If successful, you MUST refresh the graph to save changes", Toast.LENGTH_LONG)
                     .show();
         }

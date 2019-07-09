@@ -24,6 +24,24 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="n">
+        <receiver android:name=".Widget_Manthan">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_manthan_info" />
+        </receiver>
+        <receiver android:name=".Widget_Drive">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_drive_info" />
+        </receiver>
         <receiver
             android:name=".Widget_Emergency"
             android:label="Emergency Shortcut">
@@ -48,39 +66,41 @@
         </receiver>
 
         <activity
-            android:name=".formDownloadActivity"
+            android:name=".Activity_FormDownload"
             android:theme="@style/Theme.AppCompat" />
         <activity
-            android:name=".UPIActivity"
+            android:name=".Activity_UPI"
             android:configChanges="orientation|screenSize"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Activity_Login"
             android:theme="@style/Theme.AppCompat">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <meta-data android:name="android.app.shortcuts"
+
+            <meta-data
+                android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity_Main"
             android:configChanges="orientation|screenSize" />
         <activity
-            android:name=".SettingsActivity"
+            android:name=".Activity_Settings"
             android:configChanges="orientation|screenSize"
             android:theme="@style/FullScreen" />
         <activity
-            android:name=".EmergencyActivity"
+            android:name=".Activity_Emergency"
             android:configChanges="orientation|screenSize" />
         <activity
-            android:name=".InfoActivity"
+            android:name=".Activity_Info"
             android:configChanges="orientation|screenSize"
             android:theme="@style/NoStatusBar" />
         <activity
-            android:name=".webwiewActivity"
+            android:name=".Activity_WebView"
             android:configChanges="orientation|screenSize"
             android:theme="@style/myAppCompatFullscreen" />
     </application>

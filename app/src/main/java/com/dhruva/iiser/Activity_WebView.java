@@ -23,7 +23,7 @@ import androidx.appcompat.app.AlertDialog;
 
 import java.util.HashSet;
 
-public class webwiewActivity extends Activity {
+public class Activity_WebView extends Activity {
 
     private WebView webview;
     private ProgressBar loading;
@@ -55,7 +55,7 @@ public class webwiewActivity extends Activity {
     @SuppressLint({"SetJavaScriptEnabled", "ClickableViewAccessibility"})
     private void initialize() {
         final Activity activity = this;
-        final myGestures gestures = new myGestures();
+        final Class_MyGestures gestures = new Class_MyGestures();
         webview = findViewById(R.id.webview);
         loading = findViewById(R.id.loading);
 
@@ -126,22 +126,22 @@ public class webwiewActivity extends Activity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 HashSet<Integer> results = gestures.getGestures(event);
-                if (results.contains(myGestures.NONE)) {
+                if (results.contains(Class_MyGestures.NONE)) {
                     return false; //Touch not consumed
                 } else {
-                    if (results.contains(myGestures.SWIPE_UP_DOWN)) {
+                    if (results.contains(Class_MyGestures.SWIPE_UP_DOWN)) {
                         Toast.makeText(getApplicationContext(), "reload", Toast.LENGTH_SHORT).show();
                         webview.reload();
                     }
-                    if (results.contains(myGestures.CUT_DOWN)) {
+                    if (results.contains(Class_MyGestures.CUT_DOWN)) {
                         Toast.makeText(getApplicationContext(), "exit", Toast.LENGTH_SHORT).show();
                         finish();
                     }
-                    if (results.contains(myGestures.CUT_RIGHT)) {
+                    if (results.contains(Class_MyGestures.CUT_RIGHT)) {
                         Toast.makeText(getApplicationContext(), "forward", Toast.LENGTH_SHORT).show();
                         webview.goForward();
                     }
-                    if (results.contains(myGestures.CUT_LEFT)) {
+                    if (results.contains(Class_MyGestures.CUT_LEFT)) {
                         Toast.makeText(getApplicationContext(), "back", Toast.LENGTH_SHORT).show();
                         webview.goBack();
                     }

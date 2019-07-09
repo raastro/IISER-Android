@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class formDownloadActivity extends AppCompatActivity {
+public class Activity_FormDownload extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

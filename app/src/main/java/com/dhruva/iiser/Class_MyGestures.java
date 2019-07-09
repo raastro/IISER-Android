@@ -6,14 +6,14 @@ import android.view.MotionEvent;
 
 import java.util.HashSet;
 
-class myGestures {
+class Class_MyGestures {
     static final int SWIPE_RIGHT_LEFT = 1, SWIPE_LEFT_RIGHT = 2, SWIPE_UP_DOWN = 3, SWIPE_DOWN_UP = 4,
             CUT_LEFT = 5, CUT_RIGHT = 6, CUT_DOWN = 7, CUT_UP = 8, NONE = 0;
     private float[] oldEvent = new float[3];
     private float heightLimit, widthLimit, hScrollSize, vScrollSize, velocityLimit;
     private int screenLimit;
 
-    myGestures() {
+    Class_MyGestures() {
         this.heightLimit = 1f / 4;
         this.widthLimit = 3f / 4;
         this.hScrollSize = 1f / 3;
@@ -22,7 +22,7 @@ class myGestures {
         this.screenLimit = 40;
     }
 
-    myGestures(float heightLimit, float widthLimit, float hScrollSize, float vScrollSize, float velocityLimit) {
+    Class_MyGestures(float heightLimit, float widthLimit, float hScrollSize, float vScrollSize, float velocityLimit) {
         this.heightLimit = heightLimit;
         this.widthLimit = widthLimit;
         this.hScrollSize = hScrollSize;

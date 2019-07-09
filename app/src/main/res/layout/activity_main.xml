@@ -116,7 +116,7 @@
 			android:id="@+id/wifipass"
 			android:layout_width="0dp"
 			android:layout_height="match_parent"
-			android:src="@drawable/wifipassword"
+            android:src="@drawable/icon_wifipassword"
 			android:scaleType="fitCenter"
 			android:layout_weight="1"
 			android:contentDescription="@string/wifipasswordbutton"/>
@@ -124,7 +124,7 @@
 			android:id="@+id/drive"
 			android:layout_width="0dp"
 			android:layout_height="match_parent"
-			android:src="@drawable/drive"
+            android:src="@drawable/icon_drive"
 			android:scaleType="fitCenter"
 			android:layout_weight="1"
 			android:contentDescription="@string/drivebutton"/>
@@ -132,7 +132,7 @@
 			android:id="@+id/upi"
 			android:layout_width="0dp"
 			android:layout_height="match_parent"
-			android:src="@drawable/upi"
+            android:src="@drawable/icon_upi"
 			android:scaleType="fitCenter"
 			android:layout_weight="1"
 			android:contentDescription="@string/upibutton"/>
@@ -140,7 +140,7 @@
 			android:id="@+id/manthan"
 			android:layout_width="0dp"
 			android:layout_height="match_parent"
-			android:src="@drawable/manthan"
+            android:src="@drawable/icon_manthan"
 			android:scaleType="fitCenter"
 			android:layout_weight="1"
 			android:contentDescription="@string/manthan" />
@@ -148,7 +148,7 @@
 			android:id="@+id/settings"
 			android:layout_width="0dp"
 			android:layout_height="match_parent"
-			android:src="@drawable/setting_icon"
+            android:src="@drawable/icon_setting"
 			android:scaleType="fitCenter"
 			android:layout_weight="1"
 			android:contentDescription="@string/settingsbutton"/>

@@ -25,7 +25,7 @@
                 android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:contentDescription="@string/fingerprint"
-                android:src="@drawable/fingerprint"/>
+                android:src="@drawable/icon_fingerprint" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"

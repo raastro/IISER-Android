@@ -5,12 +5,7 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.RemoteViews;
-import android.widget.Spinner;
-
-import androidx.annotation.NonNull;
 
 
 /**
@@ -23,7 +18,7 @@ public class Widget_UPI extends AppWidgetProvider {
 
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_upi);
-        Intent intent = new Intent(context, UPIActivity.class);
+        Intent intent = new Intent(context, Activity_UPI.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
 
         views.setOnClickPendingIntent(R.id.upi, pendingIntent);

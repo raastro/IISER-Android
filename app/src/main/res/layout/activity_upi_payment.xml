@@ -66,21 +66,21 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/reset"
-            android:src="@drawable/remove" />
+            android:src="@drawable/icon_remove" />
         <ImageView
             android:id="@+id/refresh"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/refresh"
-            android:src="@drawable/reset" />
+            android:src="@drawable/icon_reset" />
         <ImageView
             android:id="@+id/revert"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="@string/revert"
-            android:src="@drawable/revert" />
+            android:src="@drawable/icon_revert" />
     </LinearLayout>
 
     <com.github.mikephil.charting.charts.PieChart

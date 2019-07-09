@@ -10,7 +10,7 @@ import android.view.View;
 
 import androidx.core.content.ContextCompat;
 
-public class EmergencyActivity extends Activity {
+public class Activity_Emergency extends Activity {
 
 
     @Override

@@ -3,22 +3,23 @@
         android:shortcutId="UPI"
         android:enabled="true"
         android:shortcutShortLabel="@string/upi"
-        android:icon="@drawable/upi">
+        android:icon="@drawable/icon_upi">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.dhruva.iiser"
-            android:targetClass="com.dhruva.iiser.UPIActivity" />
+            android:targetClass="com.dhruva.iiser.Activity_UPI" />
         <!--categories android:name="android.shortcut.conversation" /-->
     </shortcut>
     <shortcut
         android:shortcutId="Emergency"
         android:enabled="true"
         android:shortcutShortLabel="@string/emergency"
-        android:icon="@drawable/info_icon">
+        android:icon="@drawable/icon_info">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="com.dhruva.iiser"
-            android:targetClass="com.dhruva.iiser.EmergencyActivity" />
+            android:targetClass="com.dhruva.iiser.Activity_Emergency" />
     </shortcut>
+
     <!-- Specify more shortcuts here. -->
 </shortcuts>

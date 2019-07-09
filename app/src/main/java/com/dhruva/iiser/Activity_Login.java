@@ -23,10 +23,10 @@ import java.util.Objects;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-//All fingerprint functionality has been copied from https://www.androidauthority.com/how-to-add-fingerprint-authentication-to-your-android-app-747304/
+//All icon_fingerprint functionality has been copied from https://www.androidauthority.com/how-to-add-fingerprint-authentication-to-your-android-app-747304/
 
 
-public class LoginActivity extends AppCompatActivity {
+public class Activity_Login extends AppCompatActivity {
     private EditText password;
     @NonNull
     private Intent activityChanger = new Intent();
@@ -73,14 +73,14 @@ public class LoginActivity extends AppCompatActivity {
                 super.onAuthenticationError(errorCode, errString);
             }
 
-            //onAuthenticationSucceeded is called when a fingerprint is matched successfully//
+            //onAuthenticationSucceeded is called when a icon_fingerprint is matched successfully//
             @Override
             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
                 signin();
             }
 
-            //onAuthenticationFailed is called when the fingerprint does not match//
+            //onAuthenticationFailed is called when the icon_fingerprint does not match//
             @Override
             public void onAuthenticationFailed() {
                 super.onAuthenticationFailed();
@@ -123,7 +123,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View _view) {
                 activityChanger.setAction(Intent.ACTION_VIEW);
-                activityChanger.setClass(getApplicationContext(), EmergencyActivity.class);
+                activityChanger.setClass(getApplicationContext(), Activity_Emergency.class);
                 startActivity(activityChanger);
             }
         });
@@ -131,7 +131,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void signin() {
         activityChanger.setAction(Intent.ACTION_VIEW);
-        activityChanger.setClass(getApplicationContext(), MainActivity.class);
+        activityChanger.setClass(getApplicationContext(), Activity_Main.class);
         startActivity(activityChanger);
         finish();
     }

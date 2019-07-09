@@ -10,7 +10,7 @@
         android:id="@+id/coach_marks_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/coach_mark"
+        android:src="@drawable/overlay_coach_mark"
         android:scaleType="fitXY" />
 
 </LinearLayout>
