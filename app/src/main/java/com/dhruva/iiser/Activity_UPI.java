@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -71,7 +70,6 @@ public class Activity_UPI extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d("Tag", "onStop Called");
         applyChanges();
     }
 
@@ -105,6 +103,8 @@ public class Activity_UPI extends Activity {
             @Override
             public void onClick(View v) {
                 expenditure.edit().clear().apply();
+                Toast.makeText(getApplicationContext(), "Graph Cleared!", Toast.LENGTH_SHORT).show();
+                refreshGraph();
             }
         });
 
@@ -127,7 +127,7 @@ public class Activity_UPI extends Activity {
                         Intent intent = new Intent();
                         intent.setAction(Intent.ACTION_VIEW);
                         intent.setData(
-                                Uri.parse("icon_upi://pay?" +
+                                Uri.parse("upi://pay?" +
                                         "pa=" + upiIds[i] +
                                         "&pn=" + locations[i].replace(" ", "%20") +
                                         "&am=" + amt.getText() +
@@ -219,7 +219,7 @@ public class Activity_UPI extends Activity {
         //get data to fill
         String[] labels = {"Messes", "Canteens", "Stores", "Eateries"};
         List<Float> values = new ArrayList<>();
-        for (String key : new String[]{"mess", "canteen", "store", "eateries"}) {
+        for (String key : new String[]{"mess", "canteen", "store", "eatery"}) {
             values.add(expenditure.getFloat(key, 0.0f));
         }
         //Fill and Refresh
@@ -264,7 +264,6 @@ public class Activity_UPI extends Activity {
 
     //Save data functions
     private void revertChanges() {
-        Log.d("Tag", "revertChanges called");
         //icon_reset variables to original values
         messChange = 0;
         eateryChange = 0;
@@ -273,7 +272,6 @@ public class Activity_UPI extends Activity {
     }
 
     private void applyChanges() {
-        Log.d("Tag", "applyChanges called");
         expenditure.edit().putFloat("mess",
                 expenditure.getFloat("mess", 0.0f) + messChange).apply();
         expenditure.edit().putFloat("canteen",

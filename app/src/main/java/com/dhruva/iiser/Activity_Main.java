@@ -350,21 +350,21 @@ public class Activity_Main extends Activity {
         }
         // Update Widgets
         {
-            Intent intent = new Intent(this, Widget_Drive.class);
-            intent.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
+            Intent intent1 = new Intent(this, Widget_Drive.class);
+            intent1.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
             // Use an array and EXTRA_APPWIDGET_IDS instead of AppWidgetManager.EXTRA_APPWIDGET_ID,
             // since it seems the onUpdate() is only fired on that:
-            int[] ids = AppWidgetManager.getInstance(getApplication()).getAppWidgetIds(new ComponentName(getApplication(), Widget_Drive.class));
-            intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids);
-            sendBroadcast(intent);
+            int[] ids1 = AppWidgetManager.getInstance(getApplication()).getAppWidgetIds(new ComponentName(getApplication(), Widget_Drive.class));
+            intent1.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids1);
+            sendBroadcast(intent1);
 
-            intent = new Intent(this, Widget_Manthan.class);
-            intent.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
+            Intent intent2 = new Intent(this, Widget_Manthan.class);
+            intent2.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
             // Use an array and EXTRA_APPWIDGET_IDS instead of AppWidgetManager.EXTRA_APPWIDGET_ID,
             // since it seems the onUpdate() is only fired on that:
-            ids = AppWidgetManager.getInstance(getApplication()).getAppWidgetIds(new ComponentName(getApplication(), Widget_Manthan.class));
-            intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids);
-            sendBroadcast(intent);
+            int[] ids2 = AppWidgetManager.getInstance(getApplication()).getAppWidgetIds(new ComponentName(getApplication(), Widget_Manthan.class));
+            intent2.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids2);
+            sendBroadcast(intent2);
         }
     }
 }

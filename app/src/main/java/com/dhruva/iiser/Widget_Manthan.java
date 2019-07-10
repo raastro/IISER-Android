@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.widget.RemoteViews;
+import android.widget.Toast;
 
 /**
  * Implementation of App Widget functionality.
@@ -40,6 +41,7 @@ public class Widget_Manthan extends AppWidgetProvider {
         for (int appWidgetId : appWidgetIds) {
             updateAppWidget(context, appWidgetManager, appWidgetId);
         }
+        Toast.makeText(context, String.valueOf(appWidgetIds.length), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -51,5 +53,4 @@ public class Widget_Manthan extends AppWidgetProvider {
     public void onDisabled(Context context) {
         // Enter relevant functionality for when the last widget is disabled
     }
-
 }
