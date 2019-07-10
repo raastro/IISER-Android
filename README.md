@@ -18,7 +18,7 @@ This App is an attempt to make life at IISER a tad bit more manageable. It conta
 4. Touch install.
 5. The app should install and you can now use the app.
 
-## Features of the App-
+## Features of the App (OUTDATED)-
 
 ### Emergency Numbers
 Under Construction
