@@ -106,7 +106,7 @@ public class Activity_Login extends AppCompatActivity {
         signinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
-                if (Objects.equals(secret.getString("pswd", ""), password.getText().toString())) {
+                if (Objects.equals(secret.getString("apw", ""), password.getText().toString())) {
                     signin();
                 } else {
                     Toast.makeText(getApplicationContext(), "Incorrect Password!", Toast.LENGTH_SHORT).show();

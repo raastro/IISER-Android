@@ -7,8 +7,8 @@ import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 import android.widget.RemoteViews;
-import android.widget.Toast;
 
 /**
  * Implementation of App Widget functionality.
@@ -22,12 +22,16 @@ public class Widget_Manthan extends AppWidgetProvider {
         if (context.getSharedPreferences("userPreferences", Activity.MODE_PRIVATE).getBoolean("driveInApp", true)) {
             Intent intent = new Intent(context, Activity_WebView.class);
             intent.putExtra("url", context.getResources().getString(R.string.manthanLink));
-            PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+            Log.d("Intent", intent.toString());
+            Log.d("Extras", intent.getExtras().toString());
+            PendingIntent pendingIntent = PendingIntent.getActivity(context, appWidgetId, intent, PendingIntent.FLAG_UPDATE_CURRENT);
             views.setOnClickPendingIntent(R.id.manthan, pendingIntent);
         } else {
             Intent intent = new Intent().setAction(Intent.ACTION_VIEW);
             intent.setData(Uri.parse(context.getResources().getString(R.string.manthanLink)));
-            PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+            Log.d("Intent", intent.toString());
+            Log.d("Extras", intent.getExtras().toString());
+            PendingIntent pendingIntent = PendingIntent.getActivity(context, appWidgetId, intent, PendingIntent.FLAG_UPDATE_CURRENT);
             views.setOnClickPendingIntent(R.id.manthan, pendingIntent);
         }
 
@@ -41,7 +45,6 @@ public class Widget_Manthan extends AppWidgetProvider {
         for (int appWidgetId : appWidgetIds) {
             updateAppWidget(context, appWidgetManager, appWidgetId);
         }
-        Toast.makeText(context, String.valueOf(appWidgetIds.length), Toast.LENGTH_SHORT).show();
     }
 
     @Override

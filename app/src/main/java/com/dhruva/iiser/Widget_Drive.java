@@ -7,7 +7,9 @@ import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 import android.widget.RemoteViews;
+import android.widget.Toast;
 
 /**
  * Implementation of App Widget functionality.
@@ -18,19 +20,22 @@ public class Widget_Drive extends AppWidgetProvider {
                                 int appWidgetId) {
 
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_drive);
-
         if (context.getSharedPreferences("userPreferences", Activity.MODE_PRIVATE).getBoolean("driveInApp", true)) {
             Intent intent = new Intent(context, Activity_WebView.class);
             intent.putExtra("url", context.getResources().getString(R.string.driveLink));
-            PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+            Log.d("Intent", intent.toString());
+            Log.d("Extras", intent.getExtras().toString());
+            PendingIntent pendingIntent = PendingIntent.getActivity(context, appWidgetId, intent, PendingIntent.FLAG_UPDATE_CURRENT);
             views.setOnClickPendingIntent(R.id.drive, pendingIntent);
         } else {
             Intent intent = new Intent().setAction(Intent.ACTION_VIEW);
             intent.setData(Uri.parse(context.getResources().getString(R.string.driveLink)));
-            PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+            Log.d("Intent", intent.toString());
+            Log.d("Extras", intent.getExtras().toString());
+            PendingIntent pendingIntent = PendingIntent.getActivity(context, appWidgetId, intent, PendingIntent.FLAG_UPDATE_CURRENT);
             views.setOnClickPendingIntent(R.id.drive, pendingIntent);
         }
-
+        Toast.makeText(context, "Called", Toast.LENGTH_SHORT).show();
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);
     }

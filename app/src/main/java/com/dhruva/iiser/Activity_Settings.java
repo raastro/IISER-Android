@@ -13,8 +13,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,8 +39,13 @@ public class Activity_Settings extends Activity {
     private CheckBox coach;
     private CheckBox driveHandler;
     private EditText un;
-    private EditText pw;
+    private EditText epw;
+    private EditText apw;
+    private EditText mpw;
+    private EditText kpw;
     private EditText splcourse;
+    private LinearLayout appsigninLayout;
+    private LinearLayout serviceSigninLayout;
     private SharedPreferences userPreferences;
     EncryptedSharedPreferences secret = null;
     @NonNull
@@ -56,10 +63,15 @@ public class Activity_Settings extends Activity {
     private void initialize() {
 
         appsignin = findViewById(R.id.appsignin);
+        appsigninLayout = findViewById(R.id.appsigninLayout);
         serviceSignin = findViewById(R.id.serviceSignin);
+        serviceSigninLayout = findViewById(R.id.serviceSigninLayout);
         oldweb = findViewById(R.id.oldweb);
         un = findViewById(R.id.un);
-        pw = findViewById(R.id.pw);
+        epw = findViewById(R.id.epw);
+        apw = findViewById(R.id.apw);
+        mpw = findViewById(R.id.mpw);
+        kpw = findViewById(R.id.kpw);
         splcourse = findViewById(R.id.splcourse);
         ImageView courseinfo = findViewById(R.id.courseinfo);
         Button appupdate = findViewById(R.id.appupdate);
@@ -107,7 +119,26 @@ public class Activity_Settings extends Activity {
                 dialog.create().show();
             }
         });
-
+        appsignin.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    appsigninLayout.setVisibility(View.VISIBLE);
+                } else {
+                    appsigninLayout.setVisibility(View.GONE);
+                }
+            }
+        });
+        serviceSignin.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    serviceSigninLayout.setVisibility(View.VISIBLE);
+                } else {
+                    serviceSigninLayout.setVisibility(View.GONE);
+                }
+            }
+        });
         appupdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
@@ -171,7 +202,10 @@ public class Activity_Settings extends Activity {
 
     private void initializeLogic() {
         un.setText(secret.getString("usnm", ""));
-        pw.setText(secret.getString("pswd", ""));
+        mpw.setText(secret.getString("mpw", ""));
+        apw.setText(secret.getString("apw", ""));
+        epw.setText(secret.getString("epw", ""));
+        kpw.setText(secret.getString("kpw", ""));
         splcourse.setText(userPreferences.getString("splcourse", ""));
         oldweb.setChecked(userPreferences.getBoolean("useold", false));
         serviceSignin.setChecked(userPreferences.getBoolean("serviceSignin", false));
@@ -187,14 +221,14 @@ public class Activity_Settings extends Activity {
             // Permission was granted, Yay!
             Toast.makeText(getApplicationContext(), "Permission was Granted.", Toast.LENGTH_SHORT).show();
         } else {
-            // Permission was not granted, Yay!
+            // Permission was not granted!
             getPerm.setChecked(false);
             Toast.makeText(getApplicationContext(), "Permission was not Granted.", Toast.LENGTH_SHORT).show();
         }
     }
 
     @Override
-    protected void onPause() {
+    public void onBackPressed() {
         Toast.makeText(getApplicationContext(), "Info Updated!", Toast.LENGTH_SHORT).show();
 
         userPreferences.edit().putString("splcourse", splcourse.getText().toString()).apply();
@@ -204,8 +238,11 @@ public class Activity_Settings extends Activity {
         userPreferences.edit().putBoolean("driveInApp", driveHandler.isChecked()).apply();
 
         secret.edit().putString("usnm", un.getText().toString()).apply();
-        secret.edit().putString("pswd", pw.getText().toString()).apply();
+        secret.edit().putString("mpw", mpw.getText().toString()).apply();
+        secret.edit().putString("apw", apw.getText().toString()).apply();
+        secret.edit().putString("epw", epw.getText().toString()).apply();
+        secret.edit().putString("kpw", kpw.getText().toString()).apply();
         secret.edit().putBoolean("appsignin", appsignin.isChecked()).apply();
-        super.onPause();
+        finish();
     }
 }

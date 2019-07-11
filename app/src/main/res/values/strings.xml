@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="erppassword">ERP Password</string>
+    <string name="apppassword">App Password</string>
+    <string name="kohapassword">Koha Password</string>
+</resources>

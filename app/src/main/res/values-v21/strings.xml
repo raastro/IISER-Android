@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="username" translatable="false">Username</string>
-    <string name="password" translatable="false">Password</string>
+    <string name="ldappassword" translatable="false">LDAP Password</string>
     <string name="sign_in" translatable="false">Sign-in</string>
     <string name="moodle_course_id" translatable="false">Moodle Course ID</string>
     <string name="id" translatable="false">ID</string>
     <string name="special_course_info" translatable="false">Special Course Info</string>
     <string name="sign_in_to_services" translatable="false">Sign-in to IISER services</string>
-    <string name="sign_in_to_app" translatable="false">Sign-in to App</string>
+    <string name="lock_the_app" translatable="false">Lock the App</string>
     <string name="use_old_webmail" translatable="false">Use old Webmail</string>
     <string name="update_info" translatable="false">Update Info</string>
     <string name="update_app" translatable="false">Update App</string>
@@ -63,10 +63,10 @@
     <string name="medOffTiming" translatable="false">M–F: 0830–1230\nM–F: 1600–1500\nSt: 0830–1330</string>
     <string name="webmail_button" translatable="false">Set-up Webmail for GMail app</string>
     <string name="report_issue" translatable="false">Report Issue</string>
-    <string name="use_coach_marks">Show help on Browser</string>
-    <string name="driveHandler">Open Drive links in-app</string>
-    <string name="manthanLink">https://drive.google.com/open?id=1_MV6gHVLx8mx2K9BePctQI1mlkM93XAX</string>
-    <string name="driveLink">https://drive.google.com/drive/folders/1_zSY8mJgIlGPXUFTQQdyZGaOr1M8WfvK?usp=sharing</string>
-    <string name="emergency">Emergency Info</string>
-    <string name="upi">UPI Payments</string>
+    <string name="use_coach_marks" translatable="false">Show help on Browser</string>
+    <string name="driveHandler" translatable="false">Open Drive links in-app</string>
+    <string name="manthanLink" translatable="false">https://drive.google.com/open?id=1_MV6gHVLx8mx2K9BePctQI1mlkM93XAX</string>
+    <string name="driveLink" translatable="false">https://drive.google.com/drive/folders/1_zSY8mJgIlGPXUFTQQdyZGaOr1M8WfvK?usp=sharing</string>
+    <string name="emergency" translatable="false">Emergency Info</string>
+    <string name="upi" translatable="false">UPI Payments</string>
 </resources>

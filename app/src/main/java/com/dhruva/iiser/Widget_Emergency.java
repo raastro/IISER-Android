@@ -17,7 +17,7 @@ public class Widget_Emergency extends AppWidgetProvider {
 
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_emergency);
         Intent intent = new Intent(context, Activity_Emergency.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, appWidgetId, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         views.setOnClickPendingIntent(R.id.upi, pendingIntent);
 //        views.setTextViewText(R.id.appwidget_text, widgetText);

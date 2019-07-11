@@ -117,7 +117,7 @@ public class Activity_Main extends Activity {
                         activityIntent.setClass(getApplicationContext(), Activity_WebView.class);
                         activityIntent.putExtra("url", "http://erp.iisermohali.ac.in/login.action?" +
                                 "appUser.userId=" + secret.getString("usnm", "") +
-                                "&appUser.passwd=" + secret.getString("pswd", ""));
+                                "&appUser.passwd=" + secret.getString("epw", ""));
                         startActivity(activityIntent);
                     } else {
                         activityIntent.setAction(Intent.ACTION_VIEW);
@@ -138,7 +138,7 @@ public class Activity_Main extends Activity {
                                 "http://library.iisermohali.ac.in/cgi-bin/koha/opac-user.pl/?" +
                                         "koha_login_context=opac" +
                                         "&userid=" + secret.getString("usnm", "") +
-                                        "&password=" + secret.getString("pswd", ""));
+                                        "&password=" + secret.getString("kpw", ""));
                         startActivity(activityIntent);
                     } else {
                         activityIntent.setAction(Intent.ACTION_VIEW);
@@ -160,7 +160,7 @@ public class Activity_Main extends Activity {
                                 .replace("USRNM",
                                         Objects.requireNonNull(secret.getString("usnm", "")))
                                 .replace("PSWD",
-                                        Objects.requireNonNull(secret.getString("pswd", "")));
+                                        Objects.requireNonNull(secret.getString("mpw", "")));
                         activityIntent.setAction(Intent.ACTION_VIEW);
                         activityIntent.setClass(getApplicationContext(), Activity_WebView.class);
                         activityIntent.putExtra("url", htmlCode);
@@ -223,7 +223,7 @@ public class Activity_Main extends Activity {
                                 .replace("USRNM",
                                         Objects.requireNonNull(secret.getString("usnm", "")))
                                 .replace("PSWD",
-                                        Objects.requireNonNull(secret.getString("pswd", "")));
+                                        Objects.requireNonNull(secret.getString("mpw", "")));
                         activityIntent.setAction(Intent.ACTION_VIEW);
                         activityIntent.setClass(getApplicationContext(), Activity_WebView.class);
                         activityIntent.putExtra("url", htmlCode);
