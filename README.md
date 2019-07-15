@@ -21,7 +21,7 @@ This App is an attempt to make life at IISER a tad bit more manageable. It conta
 ## Features of the App (OUTDATED)-
 
 ### Emergency Numbers
-Under Construction
+Here you will find almost all the contacts you may find useful in different types of emergencies.
 
 ### Moodle
 Moodle is a Learning Platform or course management system (CMS). **We also provide automatic sign-in.**
